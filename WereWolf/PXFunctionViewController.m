@@ -68,6 +68,7 @@
         button.tag = i;
         button.image.image = [UIImage imageNamed:picName];
         [button setBackgroundImage:[UIImage imageNamed:@"cardBack"] forState:UIControlStateNormal];
+        
         [self.scrollView addSubview:button];
         [self.buttonArray addObject:button];
     }

@@ -142,6 +142,12 @@ static PXRoleManager *instance = nil;
     PXRoleType type = role.type;
     return type;
 }
+-(PXRoleStatus)getRoleStatusWithTag:(NSInteger)tag
+{
+    PXRole *role = [self.roles objectAtIndex:tag];
+    PXRoleStatus status = role.status;
+    return status;
+}
 -(void)changeRoleTag:(NSInteger)tag ToStatus:(PXRoleStatus)status
 {
     PXRole *role = [self.roles objectAtIndex:tag];
