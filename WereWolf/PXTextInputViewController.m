@@ -97,7 +97,6 @@
         [[PXDataKeeper sharedInstance]saveData];
     }
     
-    //[self.navigationController popViewControllerAnimated:YES];
     [self dismissFlipWithCompletion:NULL];
 }
 #pragma mark TextFieldDelegate
