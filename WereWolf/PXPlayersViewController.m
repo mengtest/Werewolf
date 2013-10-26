@@ -91,6 +91,7 @@
     animation.subtype = kCATransitionFromTop;
      animation.subtype = kCATransitionFromRight;
     [tap.view.layer addAnimation:animation forKey:@"animation"];
+    
 }
 - (void)viewDidLoad
 {
