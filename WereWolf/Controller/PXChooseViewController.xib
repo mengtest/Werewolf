@@ -179,16 +179,11 @@
         <image name="choose06q.png" width="134" height="134"/>
         <image name="choose07q.png" width="300" height="300"/>
         <image name="chooseAdd.png" width="41" height="38"/>
-        <image name="chooseAdd.png" width="41" height="38"/>
-        <image name="chooseAddS.png" width="41" height="38"/>
         <image name="chooseAddS.png" width="41" height="38"/>
         <image name="chooseBG.png" width="640" height="960"/>
         <image name="chooseMin.png" width="43" height="11"/>
-        <image name="chooseMin.png" width="43" height="11"/>
-        <image name="chooseMinS.png" width="43" height="11"/>
         <image name="chooseMinS.png" width="43" height="11"/>
         <image name="chooseStart.png" width="285" height="107"/>
-        <image name="chooseStartS.png" width="285" height="107"/>
         <image name="chooseStartS.png" width="285" height="107"/>
         <image name="small2.png" width="300" height="300"/>
         <image name="small3.png" width="300" height="300"/>

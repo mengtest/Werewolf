@@ -39,6 +39,10 @@
 {
     [super loadView];
     
+    UIImageView *background = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    background.image = [UIImage imageNamed:@"cardBG"];
+    [self.view addSubview:background];
+    
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     
     [self.view addSubview:self.scrollView];

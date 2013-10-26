@@ -57,7 +57,6 @@
 		8106FE14181AAEFC00DBC5E9 /* hunter.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8106FE0F181AAEFC00DBC5E9 /* hunter.gif */; };
 		8106FE15181AAEFC00DBC5E9 /* raise.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8106FE10181AAEFC00DBC5E9 /* raise.gif */; };
 		8106FE16181AAEFC00DBC5E9 /* witch.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8106FE11181AAEFC00DBC5E9 /* witch.gif */; };
-		8106FE17181AAEFC00DBC5E9 /* wolf.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8106FE12181AAEFC00DBC5E9 /* wolf.gif */; };
 		8106FE1D181AC3F000DBC5E9 /* PXFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106FE1C181AC3F000DBC5E9 /* PXFunctionViewController.m */; };
 		8106FE21181ACA0000DBC5E9 /* CardDetailButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106FE1F181ACA0000DBC5E9 /* CardDetailButton.m */; };
 		8106FE24181ACD4900DBC5E9 /* cardBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 8106FE22181ACD4900DBC5E9 /* cardBack.png */; };
@@ -84,7 +83,6 @@
 		810CD672181B77BD00B38CDD /* chooseMin.png in Resources */ = {isa = PBXBuildFile; fileRef = 810CD670181B77BD00B38CDD /* chooseMin.png */; };
 		810CD673181B77BD00B38CDD /* chooseMinS.png in Resources */ = {isa = PBXBuildFile; fileRef = 810CD671181B77BD00B38CDD /* chooseMinS.png */; };
 		810CD675181B78D600B38CDD /* chooseAddS.png in Resources */ = {isa = PBXBuildFile; fileRef = 810CD674181B78D600B38CDD /* chooseAddS.png */; };
-		810CD678181B80B900B38CDD /* playerCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 810CD677181B80B900B38CDD /* playerCard.png */; };
 		810CD67A181B97EA00B38CDD /* chooseBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 810CD679181B97EA00B38CDD /* chooseBG.png */; };
 		810CD67C181BAB5800B38CDD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810CD67B181BAB5800B38CDD /* SystemConfiguration.framework */; };
 		810CD67E181BAB6700B38CDD /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810CD67D181BAB6700B38CDD /* MessageUI.framework */; };
@@ -101,10 +99,16 @@
 		810CD6D6181BB30200B38CDD /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 810CD6D0181BB30200B38CDD /* CJSONDeserializer.m */; };
 		810CD6D7181BB30200B38CDD /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 810CD6D2181BB30200B38CDD /* CJSONSerializer.m */; };
 		810CD6D8181BB30200B38CDD /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 810CD6D5181BB30200B38CDD /* NSDictionary_JSONExtensions.m */; };
-		810CD6DB181BB7AF00B38CDD /* predict.gif in Resources */ = {isa = PBXBuildFile; fileRef = 810CD6D9181BB7AF00B38CDD /* predict.gif */; };
-		810CD6DC181BB7AF00B38CDD /* guard.gif in Resources */ = {isa = PBXBuildFile; fileRef = 810CD6DA181BB7AF00B38CDD /* guard.gif */; };
 		811C345E181BCF89006E2229 /* PXOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811C345C181BCF89006E2229 /* PXOverViewController.m */; };
 		811C345F181BCF89006E2229 /* PXOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811C345D181BCF89006E2229 /* PXOverViewController.xib */; };
+		817FC200181BE7C400B8B2FC /* playerCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 817FC1FF181BE7C400B8B2FC /* playerCard.png */; };
+		817FC202181BE7D600B8B2FC /* playerBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 817FC201181BE7D600B8B2FC /* playerBack.png */; };
+		817FC204181BE8AB00B8B2FC /* playerBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 817FC203181BE8AB00B8B2FC /* playerBG.png */; };
+		817FC206181BE9EE00B8B2FC /* playerBackS.png in Resources */ = {isa = PBXBuildFile; fileRef = 817FC205181BE9EE00B8B2FC /* playerBackS.png */; };
+		817FC20A181BECC900B8B2FC /* wolf.gif in Resources */ = {isa = PBXBuildFile; fileRef = 817FC207181BECC900B8B2FC /* wolf.gif */; };
+		817FC20E181BECD300B8B2FC /* cardBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 817FC20D181BECD300B8B2FC /* cardBG.png */; };
+		817FC211181BEDEA00B8B2FC /* guard.gif in Resources */ = {isa = PBXBuildFile; fileRef = 817FC20F181BEDEA00B8B2FC /* guard.gif */; };
+		817FC212181BEDEA00B8B2FC /* predict.gif in Resources */ = {isa = PBXBuildFile; fileRef = 817FC210181BEDEA00B8B2FC /* predict.gif */; };
 		DBA6AAF4181B538C00BF9664 /* cardBackName.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA6AAF3181B538C00BF9664 /* cardBackName.png */; };
 		DBA6AAFB181B568B00BF9664 /* PXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AAFA181B568B00BF9664 /* PXAlertView.m */; };
 		DBA6AAFE181B56D300BF9664 /* PXDataKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AAFD181B56D300BF9664 /* PXDataKeeper.m */; };
@@ -187,7 +191,6 @@
 		8106FE0F181AAEFC00DBC5E9 /* hunter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hunter.gif; sourceTree = "<group>"; };
 		8106FE10181AAEFC00DBC5E9 /* raise.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = raise.gif; sourceTree = "<group>"; };
 		8106FE11181AAEFC00DBC5E9 /* witch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = witch.gif; sourceTree = "<group>"; };
-		8106FE12181AAEFC00DBC5E9 /* wolf.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wolf.gif; sourceTree = "<group>"; };
 		8106FE1B181AC3F000DBC5E9 /* PXFunctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXFunctionViewController.h; sourceTree = "<group>"; };
 		8106FE1C181AC3F000DBC5E9 /* PXFunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXFunctionViewController.m; sourceTree = "<group>"; };
 		8106FE1F181ACA0000DBC5E9 /* CardDetailButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDetailButton.m; sourceTree = "<group>"; };
@@ -221,7 +224,6 @@
 		810CD670181B77BD00B38CDD /* chooseMin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chooseMin.png; sourceTree = "<group>"; };
 		810CD671181B77BD00B38CDD /* chooseMinS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chooseMinS.png; sourceTree = "<group>"; };
 		810CD674181B78D600B38CDD /* chooseAddS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chooseAddS.png; sourceTree = "<group>"; };
-		810CD677181B80B900B38CDD /* playerCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerCard.png; sourceTree = "<group>"; };
 		810CD679181B97EA00B38CDD /* chooseBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chooseBG.png; sourceTree = "<group>"; };
 		810CD67B181BAB5800B38CDD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		810CD67D181BAB6700B38CDD /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -246,11 +248,17 @@
 		810CD6D3181BB30200B38CDD /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
 		810CD6D4181BB30200B38CDD /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
 		810CD6D5181BB30200B38CDD /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
-		810CD6D9181BB7AF00B38CDD /* predict.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = predict.gif; sourceTree = "<group>"; };
-		810CD6DA181BB7AF00B38CDD /* guard.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = guard.gif; sourceTree = "<group>"; };
 		811C345B181BCF89006E2229 /* PXOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXOverViewController.h; sourceTree = "<group>"; };
 		811C345C181BCF89006E2229 /* PXOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXOverViewController.m; sourceTree = "<group>"; };
 		811C345D181BCF89006E2229 /* PXOverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXOverViewController.xib; sourceTree = "<group>"; };
+		817FC1FF181BE7C400B8B2FC /* playerCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerCard.png; sourceTree = "<group>"; };
+		817FC201181BE7D600B8B2FC /* playerBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerBack.png; sourceTree = "<group>"; };
+		817FC203181BE8AB00B8B2FC /* playerBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerBG.png; sourceTree = "<group>"; };
+		817FC205181BE9EE00B8B2FC /* playerBackS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerBackS.png; sourceTree = "<group>"; };
+		817FC207181BECC900B8B2FC /* wolf.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wolf.gif; sourceTree = "<group>"; };
+		817FC20D181BECD300B8B2FC /* cardBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBG.png; sourceTree = "<group>"; };
+		817FC20F181BEDEA00B8B2FC /* guard.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = guard.gif; sourceTree = "<group>"; };
+		817FC210181BEDEA00B8B2FC /* predict.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = predict.gif; sourceTree = "<group>"; };
 		DBA6AAF3181B538C00BF9664 /* cardBackName.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBackName.png; sourceTree = "<group>"; };
 		DBA6AAF9181B568B00BF9664 /* PXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXAlertView.h; sourceTree = "<group>"; };
 		DBA6AAFA181B568B00BF9664 /* PXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXAlertView.m; sourceTree = "<group>"; };
@@ -418,8 +426,9 @@
 		8106FDA6181A466B00DBC5E9 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				810CD676181B806300B38CDD /* Player */,
 				DBA6AB02181B608C00BF9664 /* 输入框.png */,
+				817FC20D181BECD300B8B2FC /* cardBG.png */,
+				810CD676181B806300B38CDD /* Player */,
 				8106FE3D181B5B1C00DBC5E9 /* bigCard */,
 				8106FE30181AD93100DBC5E9 /* function */,
 				8106FDE2181A605300DBC5E9 /* smallCard */,
@@ -500,9 +509,9 @@
 				8106FE0F181AAEFC00DBC5E9 /* hunter.gif */,
 				8106FE10181AAEFC00DBC5E9 /* raise.gif */,
 				8106FE11181AAEFC00DBC5E9 /* witch.gif */,
-				8106FE12181AAEFC00DBC5E9 /* wolf.gif */,
-				810CD6D9181BB7AF00B38CDD /* predict.gif */,
-				810CD6DA181BB7AF00B38CDD /* guard.gif */,
+				817FC207181BECC900B8B2FC /* wolf.gif */,
+				817FC20F181BEDEA00B8B2FC /* guard.gif */,
+				817FC210181BEDEA00B8B2FC /* predict.gif */,
 			);
 			name = GIF;
 			sourceTree = "<group>";
@@ -569,7 +578,10 @@
 		810CD676181B806300B38CDD /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				810CD677181B80B900B38CDD /* playerCard.png */,
+				817FC203181BE8AB00B8B2FC /* playerBG.png */,
+				817FC1FF181BE7C400B8B2FC /* playerCard.png */,
+				817FC205181BE9EE00B8B2FC /* playerBackS.png */,
+				817FC201181BE7D600B8B2FC /* playerBack.png */,
 			);
 			name = Player;
 			sourceTree = "<group>";
@@ -736,6 +748,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817FC211181BEDEA00B8B2FC /* guard.gif in Resources */,
 				8106FDD1181A551300DBC5E9 /* choose03q.png in Resources */,
 				8106FDD2181A551300DBC5E9 /* choose04m.png in Resources */,
 				8106FDB4181A46E200DBC5E9 /* mianButton1.png in Resources */,
@@ -745,19 +758,20 @@
 				8106FDF4181A724900DBC5E9 /* small7.png in Resources */,
 				8106FE2D181AD92D00DBC5E9 /* ghost.png in Resources */,
 				810CD66E181B775300B38CDD /* chooseStart.png in Resources */,
-				8106FE17181AAEFC00DBC5E9 /* wolf.gif in Resources */,
 				8106FE2E181AD92D00DBC5E9 /* love.png in Resources */,
 				811C345F181BCF89006E2229 /* PXOverViewController.xib in Resources */,
 				DBA6AAF4181B538C00BF9664 /* cardBackName.png in Resources */,
 				8106FDF3181A724900DBC5E9 /* small1.png in Resources */,
+				817FC204181BE8AB00B8B2FC /* playerBG.png in Resources */,
 				8106FE47181B5BBB00DBC5E9 /* big1.png in Resources */,
 				8106FDD0181A551300DBC5E9 /* choose03m.png in Resources */,
 				810CD673181B77BD00B38CDD /* chooseMinS.png in Resources */,
 				8106FE16181AAEFC00DBC5E9 /* witch.gif in Resources */,
+				817FC206181BE9EE00B8B2FC /* playerBackS.png in Resources */,
 				8106FDDD181A551300DBC5E9 /* choosePick.png in Resources */,
 				8106FDEF181A61A800DBC5E9 /* small5.png in Resources */,
 				8106FDCF181A551300DBC5E9 /* choose02q.png in Resources */,
-				810CD678181B80B900B38CDD /* playerCard.png in Resources */,
+				817FC202181BE7D600B8B2FC /* playerBack.png in Resources */,
 				8106FDD5181A551300DBC5E9 /* choose05q.png in Resources */,
 				8106FDFA181A767700DBC5E9 /* choose07q.png in Resources */,
 				8106FD7B181A3DA700DBC5E9 /* InfoPlist.strings in Resources */,
@@ -765,6 +779,7 @@
 				8106FDD7181A551300DBC5E9 /* choose06q.png in Resources */,
 				8106FD83181A3DA700DBC5E9 /* Images.xcassets in Resources */,
 				810CD65E181B656D00B38CDD /* chooseAdd.png in Resources */,
+				817FC212181BEDEA00B8B2FC /* predict.gif in Resources */,
 				810CD672181B77BD00B38CDD /* chooseMin.png in Resources */,
 				8106FE4C181B5BBB00DBC5E9 /* big6.png in Resources */,
 				8106FDBB181A4C7400DBC5E9 /* PXChooseViewController.xib in Resources */,
@@ -773,22 +788,22 @@
 				810CD67A181B97EA00B38CDD /* chooseBG.png in Resources */,
 				8106FE4B181B5BBB00DBC5E9 /* big5.png in Resources */,
 				8106FE46181B5BBB00DBC5E9 /* big0.png in Resources */,
-				810CD6DC181BB7AF00B38CDD /* guard.gif in Resources */,
 				8106FDD4181A551300DBC5E9 /* choose05m.png in Resources */,
 				8106FE49181B5BBB00DBC5E9 /* big3.png in Resources */,
+				817FC20A181BECC900B8B2FC /* wolf.gif in Resources */,
 				810CD675181B78D600B38CDD /* chooseAddS.png in Resources */,
 				8106FDED181A61A800DBC5E9 /* small3.png in Resources */,
 				8106FDEA181A61A800DBC5E9 /* small0.png in Resources */,
 				8106FE15181AAEFC00DBC5E9 /* raise.gif in Resources */,
 				8106FDEC181A61A800DBC5E9 /* small2.png in Resources */,
 				810CD692181BAC3400B38CDD /* BaiduSocialShareSource.bundle in Resources */,
-				810CD6DB181BB7AF00B38CDD /* predict.gif in Resources */,
 				8106FE14181AAEFC00DBC5E9 /* hunter.gif in Resources */,
 				8106FDB5181A46E200DBC5E9 /* mianButton2.png in Resources */,
 				8106FDEE181A61A800DBC5E9 /* small4.png in Resources */,
 				8106FDA3181A459B00DBC5E9 /* PXMianViewController.xib in Resources */,
 				8106FDCE181A551300DBC5E9 /* choose02m.png in Resources */,
 				8106FE48181B5BBB00DBC5E9 /* big2.png in Resources */,
+				817FC200181BE7C400B8B2FC /* playerCard.png in Resources */,
 				8106FE4D181B5BBB00DBC5E9 /* big7.png in Resources */,
 				8106FE24181ACD4900DBC5E9 /* cardBack.png in Resources */,
 				DBA6AB03181B608C00BF9664 /* 输入框.png in Resources */,
@@ -796,6 +811,7 @@
 				8106FDF0181A61A800DBC5E9 /* small6.png in Resources */,
 				8106FE13181AAEFC00DBC5E9 /* cupid.gif in Resources */,
 				8106FDB3181A46E200DBC5E9 /* mainBG.png in Resources */,
+				817FC20E181BECD300B8B2FC /* cardBG.png in Resources */,
 				8106FDB6181A46E200DBC5E9 /* mianButton3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -968,10 +984,10 @@
 				INFOPLIST_FILE = "WereWolf/WereWolf-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/BaiduSocialShare/WB,
-					/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/BaiduSocialShare/WX,
-					"/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/Release-iphonesimulator",
-					"/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/universal-bin",
+					"${SRCROOT}/WereWolf/BaiduSocialShare/WB",
+					"${SRCROOT}/WereWolf/BaiduSocialShare/WX",
+					"${SRCROOT}/WereWolf/Release-iphonesimulator",
+					"${SRCROOT}/WereWolf/universal-bin",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				"OTHER_LDFLAGS[arch=*]" = "-all_load";
@@ -994,10 +1010,10 @@
 				INFOPLIST_FILE = "WereWolf/WereWolf-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/BaiduSocialShare/WB,
-					/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/BaiduSocialShare/WX,
-					"/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/Release-iphonesimulator",
-					"/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/universal-bin",
+					"${SRCROOT}/WereWolf/BaiduSocialShare/WB",
+					"${SRCROOT}/WereWolf/BaiduSocialShare/WX",
+					"${SRCROOT}/WereWolf/Release-iphonesimulator",
+					"${SRCROOT}/WereWolf/universal-bin",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				"OTHER_LDFLAGS[arch=*]" = "-all_load";

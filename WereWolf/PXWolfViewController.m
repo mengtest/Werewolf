@@ -32,7 +32,7 @@
 -(void)didSelectedButton:(NSInteger)tag
 {
     for (CardDetailButton *button in self.buttonArray) {
-        if (button.tag == tag) {
+        if (button.tag == tag&&[self.manager getRoleStatusWithTag:tag] != PXRoleStatusIsGuard) {
             button.secondImage.image = [UIImage imageNamed:@"ghost"];
             [self.manager changeRoleTag:tag ToStatus:PXRoleStatusDead];
         }

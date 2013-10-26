@@ -35,6 +35,7 @@
         if (button.tag == tag) {
             button.secondImage.image = [UIImage imageNamed:@"shield"];
             [self.manager changeRoleTag:tag ToStatus:PXRoleStatusIsGuard];
+            NSLog(@"shield:%d",tag);
         }
     }
 }

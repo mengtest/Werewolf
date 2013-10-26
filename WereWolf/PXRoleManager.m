@@ -159,6 +159,7 @@ static PXRoleManager *instance = nil;
 {
     PXRole *role = [self.roles objectAtIndex:tag];
     role.status = status;
+
     if (status == PXRoleStatusDead) {
         PXRoleType type = [self getRoleTypeWithTag:tag];
         switch (type) {

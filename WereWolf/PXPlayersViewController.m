@@ -15,11 +15,11 @@
 
 #define CARD_CONTAINER_WIDTH 320-31-31
 #define CARD_CONTAINER_MARGIN 31.0
-#define CARD_WIDTH  100
-#define CARD_HEIGHT 120
+#define CARD_WIDTH  130
+#define CARD_HEIGHT 156
 #define cardX 30.0
 #define cardY 155.0
-
+#define backButtonFrame CGRectMake(89,362.5,142.5,54)
 #define startButtonFrame
 @interface PXPlayersViewController (){
     NSInteger cardNum;
@@ -45,14 +45,29 @@
 {
     [super loadView];
     
+    UIImageView *background = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    background.image = [UIImage imageNamed:@"playerBG"];
+    [self.view addSubview:background];
+    
+    
     UIButton *startButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [startButton setTitle:@"startGame" forState:UIControlStateNormal];
     startButton.frame = CGRectMake(0, 0, 100, 100);
     [startButton addTarget:self action:@selector(startGame:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:startButton];
     
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    backButton.frame = backButtonFrame;
+    [backButton setImage:[UIImage imageNamed:@"playerBack"] forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"playerBackS"] forState:UIControlStateHighlighted];
+    [backButton addTarget:self action:@selector(popVC:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:backButton];
     
     [self initCardWithNumber:self.manager.sumNum];
+}
+-(void)popVC:(UIButton *)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)startGame:(UIButton *)sender
 {
@@ -168,11 +183,7 @@
         }];
     }
 }
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-}
+
 #pragma mark - Trace Touch Point
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
