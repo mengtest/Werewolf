@@ -77,6 +77,7 @@
 		8106FE36181AE0D500DBC5E9 /* PXPredictViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106FE35181AE0D500DBC5E9 /* PXPredictViewController.m */; };
 		8106FE39181AE0E500DBC5E9 /* PXWolfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106FE38181AE0E500DBC5E9 /* PXWolfViewController.m */; };
 		8106FE3C181AE0F600DBC5E9 /* PXWitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106FE3B181AE0F600DBC5E9 /* PXWitchViewController.m */; };
+		DBA6AAF4181B538C00BF9664 /* cardBackName.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA6AAF3181B538C00BF9664 /* cardBackName.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +178,7 @@
 		8106FE38181AE0E500DBC5E9 /* PXWolfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXWolfViewController.m; sourceTree = "<group>"; };
 		8106FE3A181AE0F600DBC5E9 /* PXWitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXWitchViewController.h; sourceTree = "<group>"; };
 		8106FE3B181AE0F600DBC5E9 /* PXWitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXWitchViewController.m; sourceTree = "<group>"; };
+		DBA6AAF3181B538C00BF9664 /* cardBackName.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBackName.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +357,7 @@
 		8106FDE2181A605300DBC5E9 /* smallCard */ = {
 			isa = PBXGroup;
 			children = (
+				DBA6AAF3181B538C00BF9664 /* cardBackName.png */,
 				8106FDE3181A61A800DBC5E9 /* small0.png */,
 				8106FDF1181A724900DBC5E9 /* small1.png */,
 				8106FDF2181A724900DBC5E9 /* small7.png */,
@@ -522,6 +525,7 @@
 				8106FE17181AAEFC00DBC5E9 /* wolf.gif in Resources */,
 				8106FE2E181AD92D00DBC5E9 /* love.png in Resources */,
 				8106FDDA181A551300DBC5E9 /* chooseBG.png in Resources */,
+				DBA6AAF4181B538C00BF9664 /* cardBackName.png in Resources */,
 				8106FDF3181A724900DBC5E9 /* small1.png in Resources */,
 				8106FDD0181A551300DBC5E9 /* choose03m.png in Resources */,
 				8106FE16181AAEFC00DBC5E9 /* witch.gif in Resources */,
