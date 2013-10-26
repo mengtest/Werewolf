@@ -78,6 +78,9 @@
 		8106FE39181AE0E500DBC5E9 /* PXWolfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106FE38181AE0E500DBC5E9 /* PXWolfViewController.m */; };
 		8106FE3C181AE0F600DBC5E9 /* PXWitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106FE3B181AE0F600DBC5E9 /* PXWitchViewController.m */; };
 		DBA6AAF4181B538C00BF9664 /* cardBackName.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA6AAF3181B538C00BF9664 /* cardBackName.png */; };
+		DBA6AAFB181B568B00BF9664 /* PXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AAFA181B568B00BF9664 /* PXAlertView.m */; };
+		DBA6AAFE181B56D300BF9664 /* PXDataKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AAFD181B56D300BF9664 /* PXDataKeeper.m */; };
+		DBA6AB01181B56F600BF9664 /* PXTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AB00181B56F600BF9664 /* PXTextInputViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +182,12 @@
 		8106FE3A181AE0F600DBC5E9 /* PXWitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXWitchViewController.h; sourceTree = "<group>"; };
 		8106FE3B181AE0F600DBC5E9 /* PXWitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXWitchViewController.m; sourceTree = "<group>"; };
 		DBA6AAF3181B538C00BF9664 /* cardBackName.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBackName.png; sourceTree = "<group>"; };
+		DBA6AAF9181B568B00BF9664 /* PXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXAlertView.h; sourceTree = "<group>"; };
+		DBA6AAFA181B568B00BF9664 /* PXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXAlertView.m; sourceTree = "<group>"; };
+		DBA6AAFC181B56D300BF9664 /* PXDataKeeper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXDataKeeper.h; sourceTree = "<group>"; };
+		DBA6AAFD181B56D300BF9664 /* PXDataKeeper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDataKeeper.m; sourceTree = "<group>"; };
+		DBA6AAFF181B56F600BF9664 /* PXTextInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXTextInputViewController.h; sourceTree = "<group>"; };
+		DBA6AB00181B56F600BF9664 /* PXTextInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXTextInputViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +254,7 @@
 				8106FDF8181A74AD00DBC5E9 /* Model */,
 				8106FDA4181A462C00DBC5E9 /* Controller */,
 				8106FE1E181AC63900DBC5E9 /* View */,
+				DBA6AAF5181B55D900BF9664 /* Vendor */,
 				8106FDA5181A464500DBC5E9 /* Resource */,
 				8106FD82181A3DA700DBC5E9 /* Images.xcassets */,
 				8106FD77181A3DA700DBC5E9 /* Supporting Files */,
@@ -436,6 +446,19 @@
 			name = function;
 			sourceTree = "<group>";
 		};
+		DBA6AAF5181B55D900BF9664 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				DBA6AAFF181B56F600BF9664 /* PXTextInputViewController.h */,
+				DBA6AB00181B56F600BF9664 /* PXTextInputViewController.m */,
+				DBA6AAFC181B56D300BF9664 /* PXDataKeeper.h */,
+				DBA6AAFD181B56D300BF9664 /* PXDataKeeper.m */,
+				DBA6AAF9181B568B00BF9664 /* PXAlertView.h */,
+				DBA6AAFA181B568B00BF9664 /* PXAlertView.m */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -577,9 +600,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA6AB01181B56F600BF9664 /* PXTextInputViewController.m in Sources */,
 				8106FDF7181A74A400DBC5E9 /* PXRoleManager.m in Sources */,
 				8106FD81181A3DA700DBC5E9 /* PXAppDelegate.m in Sources */,
 				8106FE3C181AE0F600DBC5E9 /* PXWitchViewController.m in Sources */,
+				DBA6AAFB181B568B00BF9664 /* PXAlertView.m in Sources */,
 				8106FE39181AE0E500DBC5E9 /* PXWolfViewController.m in Sources */,
 				8106FE0B181AA98600DBC5E9 /* PXStoryViewController.m in Sources */,
 				8106FE02181A9C9400DBC5E9 /* PXPlayersViewController.m in Sources */,
@@ -592,6 +617,7 @@
 				8106FDA2181A459B00DBC5E9 /* PXMianViewController.m in Sources */,
 				8106FDBA181A4C7400DBC5E9 /* PXChooseViewController.m in Sources */,
 				8106FE1D181AC3F000DBC5E9 /* PXFunctionViewController.m in Sources */,
+				DBA6AAFE181B56D300BF9664 /* PXDataKeeper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

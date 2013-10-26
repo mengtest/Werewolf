@@ -9,6 +9,7 @@
 #import "PXPlayersViewController.h"
 #import "PXStoryViewController.h"
 #import "PXRoleManager.h"
+#import "PXTextInputViewController.h"
 #define CARD_CONTAINER_WIDTH 320-31-31
 #define CARD_CONTAINER_MARGIN 31.0
 #define CARD_WIDTH  136.5
@@ -92,6 +93,8 @@
      animation.subtype = kCATransitionFromRight;
     [tap.view.layer addAnimation:animation forKey:@"animation"];
     
+    PXTextInputViewController *inputNameController = [[PXTextInputViewController alloc]init];
+    [self.navigationController pushViewController:inputNameController animated:YES];
 }
 - (void)viewDidLoad
 {
