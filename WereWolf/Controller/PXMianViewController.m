@@ -46,7 +46,6 @@
 }
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
-    NSLog(@"%@",gestureRecognizer);
     return YES;
 }
 @end

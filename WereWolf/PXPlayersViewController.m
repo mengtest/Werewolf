@@ -99,7 +99,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"%@",self.manager);
+    
     
 }
 
