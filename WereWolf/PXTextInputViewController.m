@@ -30,7 +30,7 @@
     [super viewDidLoad];
     _cardView = [[UIImageView alloc]initWithFrame:self.view.frame];
     _cardView.backgroundColor = [UIColor yellowColor];
-//    _cardView.image = [UIImage imageNamed:@"<#string#>"]
+    _cardView.image = [UIImage imageNamed:@"big0"];
     [self.view addSubview:_cardView];
     
     PXDataKeeper *dataKeeper = [PXDataKeeper sharedInstance];
@@ -40,7 +40,8 @@
     _textField = [[UITextField alloc]initWithFrame:CGRectMake(50, 50, 220, 80)];
     _textField.delegate = self;
     _textField.placeholder = @"请输入名字";
-    [_textField addTarget:self action:@selector(tableViewDropDown) forControlEvents:UIControlEventAllTouchEvents];
+    _textField.backgroundColor = [UIColor whiteColor];
+    //[_textField addTarget:self action:@selector(tableViewDropDown) forControlEvents:UIControlEventAllTouchEvents];
     [self.view addSubview:_textField];
     
     _nameTableView = [[UITableView alloc]initWithFrame:CGRectMake(50, 130, 220, 200)];
@@ -57,10 +58,12 @@
     [super didReceiveMemoryWarning];
 }
 
+/*
 - (void)tableViewDropDown
 {
     self.nameTableView.hidden = NO;
 }
+ */
 
 -(void)addGesture
 {
@@ -84,15 +87,21 @@
         [[PXDataKeeper sharedInstance]saveData];
     }
     
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 #pragma mark TextFieldDelegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self pushVC];
-    //测试保存功能
-    //[[PXDataKeeper sharedInstance]getData];
     return YES;
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    self.nameTableView.hidden = NO;
+    CGRect frame = self.textField.frame;
+    
 }
 
 #pragma mark UITableViewDelegate

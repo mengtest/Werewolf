@@ -89,6 +89,7 @@
 		DBA6AAFB181B568B00BF9664 /* PXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AAFA181B568B00BF9664 /* PXAlertView.m */; };
 		DBA6AAFE181B56D300BF9664 /* PXDataKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AAFD181B56D300BF9664 /* PXDataKeeper.m */; };
 		DBA6AB01181B56F600BF9664 /* PXTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AB00181B56F600BF9664 /* PXTextInputViewController.m */; };
+		DBA6AB03181B608C00BF9664 /* 输入框.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA6AB02181B608C00BF9664 /* 输入框.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +205,7 @@
 		DBA6AAFD181B56D300BF9664 /* PXDataKeeper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDataKeeper.m; sourceTree = "<group>"; };
 		DBA6AAFF181B56F600BF9664 /* PXTextInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXTextInputViewController.h; sourceTree = "<group>"; };
 		DBA6AB00181B56F600BF9664 /* PXTextInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXTextInputViewController.m; sourceTree = "<group>"; };
+		DBA6AB02181B608C00BF9664 /* 输入框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "输入框.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +337,7 @@
 		8106FDA6181A466B00DBC5E9 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				DBA6AB02181B608C00BF9664 /* 输入框.png */,
 				8106FE3D181B5B1C00DBC5E9 /* bigCard */,
 				8106FE30181AD93100DBC5E9 /* function */,
 				8106FDE2181A605300DBC5E9 /* smallCard */,
@@ -615,6 +618,7 @@
 				8106FE48181B5BBB00DBC5E9 /* big2.png in Resources */,
 				8106FE4D181B5BBB00DBC5E9 /* big7.png in Resources */,
 				8106FE24181ACD4900DBC5E9 /* cardBack.png in Resources */,
+				DBA6AB03181B608C00BF9664 /* 输入框.png in Resources */,
 				8106FE0C181AA98600DBC5E9 /* PXStoryViewController.xib in Resources */,
 				8106FDF0181A61A800DBC5E9 /* small6.png in Resources */,
 				8106FE13181AAEFC00DBC5E9 /* cupid.gif in Resources */,
