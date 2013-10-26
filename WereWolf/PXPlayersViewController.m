@@ -10,6 +10,7 @@
 #import "PXStoryViewController.h"
 #import "PXRoleManager.h"
 #import "PXTextInputViewController.h"
+#import "PXInputView.h"
 
 #define CARD_CONTAINER_WIDTH 320-31-31
 #define CARD_CONTAINER_MARGIN 31.0
@@ -84,15 +85,14 @@
 
 -(void)tapEvent:(UITapGestureRecognizer *)tap
 {
-    PXTextInputViewController *inputNameController = [[PXTextInputViewController alloc]init];
-    inputNameController.view.frame = CGRectMake(0, 0, 310, 300);
-    [self.view addSubview:inputNameController.view];
     
-    
+    UIView *InputView = [[PXInputView alloc]initWithFrame:CGRectMake(100, 0, 160, 240)];
+    [self.view addSubview:InputView];
+
     [UIView transitionFromView:tap.view
-                        toView:inputNameController.view
+                        toView:InputView
                       duration: 0.5
-                       options: UIViewAnimationOptionTransitionFlipFromLeft+UIViewAnimationOptionCurveEaseInOut
+                       options: UIViewAnimationOptionTransitionFlipFromRight+UIViewAnimationOptionCurveEaseInOut
                     completion:^(BOOL finished) {
                         if (finished) {
                             //UIView *view = (displayingPrimary ? view1 : view2);
@@ -101,6 +101,7 @@
                     }
      ];
     
+
 }
 - (void)viewDidLoad
 {
