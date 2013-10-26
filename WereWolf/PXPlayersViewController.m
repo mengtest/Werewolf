@@ -10,6 +10,7 @@
 #import "PXStoryViewController.h"
 #import "PXRoleManager.h"
 #import "PXTextInputViewController.h"
+
 #define CARD_CONTAINER_WIDTH 320-31-31
 #define CARD_CONTAINER_MARGIN 31.0
 #define CARD_WIDTH  136.5
@@ -83,18 +84,23 @@
 
 -(void)tapEvent:(UITapGestureRecognizer *)tap
 {
-    
-    CATransition *animation = [CATransition animation];
-    animation.delegate = self;
-    animation.duration =0.5f;
-    animation.timingFunction = UIViewAnimationCurveEaseInOut;
-    animation.type = @"cube";
-    animation.subtype = kCATransitionFromTop;
-     animation.subtype = kCATransitionFromRight;
-    [tap.view.layer addAnimation:animation forKey:@"animation"];
-    
     PXTextInputViewController *inputNameController = [[PXTextInputViewController alloc]init];
-    [self.navigationController pushViewController:inputNameController animated:YES];
+    inputNameController.view.frame = CGRectMake(0, 0, 310, 300);
+    [self.view addSubview:inputNameController.view];
+    
+    
+    [UIView transitionFromView:tap.view
+                        toView:inputNameController.view
+                      duration: 0.5
+                       options: UIViewAnimationOptionTransitionFlipFromLeft+UIViewAnimationOptionCurveEaseInOut
+                    completion:^(BOOL finished) {
+                        if (finished) {
+                            //UIView *view = (displayingPrimary ? view1 : view2);
+                            
+                        }
+                    }
+     ];
+    
 }
 - (void)viewDidLoad
 {
@@ -263,5 +269,7 @@
         [UIView commitAnimations];
     }
 }
+
+
 
 @end

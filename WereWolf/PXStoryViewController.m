@@ -49,6 +49,7 @@
 }
 -(void)nextVC:(UIPanGestureRecognizer *)sender
 {
+    NSLog(@"type:%d\ncontroller%@\n",self.type,self.navigationController.childViewControllers);
     switch (self.type) {
         case PXStoryTypeCupid:{
             PXCupidViewController *cupid = [[PXCupidViewController alloc] init];
