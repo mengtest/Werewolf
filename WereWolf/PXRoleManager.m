@@ -82,58 +82,58 @@ static PXRoleManager *instance = nil;
 {
     PXStoryType storyType = 4;
     
-    NSLog(@"%d",currentType);
     switch (currentType) {
         case PXStoryTypeStart:{
             if (_cupidIsChosen) {
-                return PXStoryTypeCupid;
+                storyType =  PXStoryTypeCupid;
             }
             if (_gurafIsChosen) {
-                return PXStoryTypeGuard;
+                storyType = PXStoryTypeGuard;
             }
             if (_predictIsChosen) {
-                return PXStoryTypePredict;
+                storyType = PXStoryTypePredict;
             }
             break;
         }
         case PXStoryTypeCupid:{
             if (_gurafIsChosen) {
-                return PXStoryTypeGuard;
+                storyType =  PXStoryTypeGuard;
             }
             if (_predictIsChosen) {
-                return PXStoryTypePredict;
+                storyType = PXStoryTypePredict;
             }
             break;
         }
         case PXStoryTypeGuard:{
             if (_predictIsChosen) {
-                return PXStoryTypePredict;
+                storyType = PXStoryTypePredict;
             }
             break;
         }
         case PXStoryTypeWolf:{
             if (_witchIsChosen) {
-                return PXStoryTypeWitch;
+                storyType = PXStoryTypeWitch;
             }
-            return PXStoryTypePeople;
+            storyType = PXStoryTypePeople;
             break;
         }
         case PXStoryTypeWitch:{
-            return PXStoryTypePeople;
+            storyType = PXStoryTypePeople;
             break;
         }
         case PXStoryTypePeople:{
             if (_gurafIsChosen) {
-                return PXStoryTypeGuard;
+                storyType = PXStoryTypeGuard;
             }
             if (_predictIsChosen) {
-                return PXStoryTypePredict;
+                storyType = PXStoryTypePredict;
             }
             break;
         }
         default:
             break;
     }
+    NSLog(@"\ncurrentType:%d\nnextType:%d\n%@",currentType,storyType,self);
     return storyType;
 }
 -(PXRoleType)getRoleTypeWithTag:(NSInteger)tag
