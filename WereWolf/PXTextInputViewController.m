@@ -30,6 +30,7 @@
     [super viewDidLoad];
     _cardView = [[UIImageView alloc]initWithFrame:self.view.frame];
     _cardView.backgroundColor = [UIColor yellowColor];
+//    _cardView.image = [UIImage imageNamed:@"<#string#>"]
     [self.view addSubview:_cardView];
     
     PXDataKeeper *dataKeeper = [PXDataKeeper sharedInstance];
