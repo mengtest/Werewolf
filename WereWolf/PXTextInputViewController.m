@@ -8,6 +8,7 @@
 
 #import "PXTextInputViewController.h"
 #import "PXDataKeeper.h"
+#import "UIViewController+ADFlipTransition.h"
 @interface PXTextInputViewController ()
 
 @end
@@ -87,8 +88,8 @@
         [[PXDataKeeper sharedInstance]saveData];
     }
     
-    [self.navigationController popViewControllerAnimated:YES];
-    
+    //[self.navigationController popViewControllerAnimated:YES];
+    [self dismissFlipWithCompletion:NULL];
 }
 #pragma mark TextFieldDelegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField

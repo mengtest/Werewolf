@@ -46,7 +46,7 @@
 -(void)addGesture
 {
     UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(remove)];
-    swipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    swipe.direction = UISwipeGestureRecognizerDirectionRight;
     [self addGestureRecognizer:swipe];
 }
 

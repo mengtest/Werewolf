@@ -9,7 +9,8 @@
 #import "PXPlayersViewController.h"
 #import "PXStoryViewController.h"
 #import "PXRoleManager.h"
-//#import "PXTextInputViewController.h"
+#import "PXTextInputViewController.h"
+#import "UIViewController+ADFlipTransition.h"
 #import "PXInputView.h"
 #define CARD_CONTAINER_WIDTH 320-31-31
 #define CARD_CONTAINER_MARGIN 31.0
@@ -84,7 +85,7 @@
 
 -(void)tapEvent:(UITapGestureRecognizer *)tap
 {
-    
+    /*
     CATransition *animation = [CATransition animation];
     animation.delegate = self;
     animation.duration =0.5f;
@@ -93,11 +94,13 @@
     animation.subtype = kCATransitionFromTop;
      animation.subtype = kCATransitionFromRight;
     [tap.view.layer addAnimation:animation forKey:@"animation"];
+     */
     
-    //PXTextInputViewController *inputNameController = [[PXTextInputViewController alloc]init];
+    PXTextInputViewController *inputNameController = [[PXTextInputViewController alloc]init];
     //[self.navigationController pushViewController:inputNameController animated:YES];
-    UIView *InputView = [[PXInputView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
-    [self.view addSubview:InputView];
+    [self flipToViewController:inputNameController fromView:tap.view withCompletion:NULL];
+    //UIView *InputView = [[PXInputView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
+    //[self.view addSubview:InputView];
 }
 - (void)viewDidLoad
 {

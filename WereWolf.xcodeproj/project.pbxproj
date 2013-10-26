@@ -89,6 +89,9 @@
 		DBA6AB01181B56F600BF9664 /* PXTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AB00181B56F600BF9664 /* PXTextInputViewController.m */; };
 		DBA6AB03181B608C00BF9664 /* 输入框.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA6AB02181B608C00BF9664 /* 输入框.png */; };
 		DBA6AB06181B703400BF9664 /* PXInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AB05181B703400BF9664 /* PXInputView.m */; };
+		DBA6AB09181B878500BF9664 /* UIViewController+ADFlipTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AB08181B878500BF9664 /* UIViewController+ADFlipTransition.m */; };
+		DBA6AB0C181B891100BF9664 /* ADFlipTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AB0B181B891100BF9664 /* ADFlipTransition.m */; };
+		DBA6AB0F181B895E00BF9664 /* UIView+CaptureImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AB0E181B895E00BF9664 /* UIView+CaptureImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +208,12 @@
 		DBA6AB02181B608C00BF9664 /* 输入框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "输入框.png"; sourceTree = "<group>"; };
 		DBA6AB04181B703400BF9664 /* PXInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXInputView.h; sourceTree = "<group>"; };
 		DBA6AB05181B703400BF9664 /* PXInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXInputView.m; sourceTree = "<group>"; };
+		DBA6AB07181B878500BF9664 /* UIViewController+ADFlipTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ADFlipTransition.h"; sourceTree = "<group>"; };
+		DBA6AB08181B878500BF9664 /* UIViewController+ADFlipTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ADFlipTransition.m"; sourceTree = "<group>"; };
+		DBA6AB0A181B891100BF9664 /* ADFlipTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADFlipTransition.h; sourceTree = "<group>"; };
+		DBA6AB0B181B891100BF9664 /* ADFlipTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADFlipTransition.m; sourceTree = "<group>"; };
+		DBA6AB0D181B895E00BF9664 /* UIView+CaptureImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CaptureImage.h"; sourceTree = "<group>"; };
+		DBA6AB0E181B895E00BF9664 /* UIView+CaptureImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CaptureImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -481,6 +490,12 @@
 		DBA6AAF5181B55D900BF9664 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				DBA6AB0D181B895E00BF9664 /* UIView+CaptureImage.h */,
+				DBA6AB0E181B895E00BF9664 /* UIView+CaptureImage.m */,
+				DBA6AB0A181B891100BF9664 /* ADFlipTransition.h */,
+				DBA6AB0B181B891100BF9664 /* ADFlipTransition.m */,
+				DBA6AB07181B878500BF9664 /* UIViewController+ADFlipTransition.h */,
+				DBA6AB08181B878500BF9664 /* UIViewController+ADFlipTransition.m */,
 				DBA6AAFF181B56F600BF9664 /* PXTextInputViewController.h */,
 				DBA6AB00181B56F600BF9664 /* PXTextInputViewController.m */,
 				DBA6AAFC181B56D300BF9664 /* PXDataKeeper.h */,
@@ -645,9 +660,12 @@
 				8106FDF7181A74A400DBC5E9 /* PXRoleManager.m in Sources */,
 				8106FD81181A3DA700DBC5E9 /* PXAppDelegate.m in Sources */,
 				8106FE3C181AE0F600DBC5E9 /* PXWitchViewController.m in Sources */,
+				DBA6AB0C181B891100BF9664 /* ADFlipTransition.m in Sources */,
 				DBA6AB06181B703400BF9664 /* PXInputView.m in Sources */,
+				DBA6AB09181B878500BF9664 /* UIViewController+ADFlipTransition.m in Sources */,
 				DBA6AAFB181B568B00BF9664 /* PXAlertView.m in Sources */,
 				8106FE39181AE0E500DBC5E9 /* PXWolfViewController.m in Sources */,
+				DBA6AB0F181B895E00BF9664 /* UIView+CaptureImage.m in Sources */,
 				8106FE0B181AA98600DBC5E9 /* PXStoryViewController.m in Sources */,
 				8106FE02181A9C9400DBC5E9 /* PXPlayersViewController.m in Sources */,
 				8106FE33181ADF9300DBC5E9 /* PXGuardViewController.m in Sources */,
