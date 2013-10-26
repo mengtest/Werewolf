@@ -21,6 +21,7 @@
 -(PXStoryType)getNextStoryTypeFromCurrentType:(PXStoryType)currentType;
 
 -(PXRoleType)getRoleTypeWithTag:(NSInteger)tag;
+-(PXRoleStatus)getRoleStatusWithTag:(NSInteger)tag;
 
 
 -(void)changeRoleTag:(NSInteger)tag ToStatus:(PXRoleStatus)status;

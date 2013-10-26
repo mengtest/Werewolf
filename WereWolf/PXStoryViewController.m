@@ -13,7 +13,9 @@
 #import "PXWitchViewController.h"
 #import "PXWolfViewController.h"
 #import "PXPredictViewController.h"
-@interface PXStoryViewController ()
+@interface PXStoryViewController (){
+    NSData *gif;
+}
 @property (weak, nonatomic) IBOutlet UIWebView *gifView;
 
 @end
@@ -33,9 +35,10 @@
 {
     [super viewDidLoad];
     
-    
     NSString *gitName = [self getGifNameForType:self.type];
-    NSData *gif = [NSData dataWithContentsOfFile: [[NSBundle mainBundle] pathForResource:gitName ofType:@"gif"]];
+    gif = [NSData dataWithContentsOfFile: [[NSBundle mainBundle] pathForResource:gitName ofType:@"gif"]];
+    
+
     self.gifView.userInteractionEnabled = NO;
     [self.gifView loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
     
@@ -110,6 +113,11 @@
     }
     
     return gitName;
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.gifView = nil;
 }
 - (void)didReceiveMemoryWarning
 {
