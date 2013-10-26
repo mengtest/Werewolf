@@ -1,78 +1,56 @@
 //
-//  PXTextInputViewController.m
+//  PXInputView.m
 //  WereWolf
 //
-//  Created by Mango on 13-10-25.
+//  Created by Mango on 13-10-26.
 //  Copyright (c) 2013年 朱泌丞. All rights reserved.
 //
 
-#import "PXTextInputViewController.h"
+#import "PXInputView.h"
 #import "PXDataKeeper.h"
-@interface PXTextInputViewController ()
 
-@end
+@implementation PXInputView
 
-@implementation PXTextInputViewController
-
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithFrame:frame];
     if (self)
     {
+        _cardView = [[UIImageView alloc]initWithFrame:self.frame];
+        _cardView.backgroundColor = [UIColor yellowColor];
+        _cardView.image = [UIImage imageNamed:@"big0"];
+        [self addSubview:_cardView];
+        
+        PXDataKeeper *dataKeeper = [PXDataKeeper sharedInstance];
+        [dataKeeper getData];
+        _nameArray = dataKeeper.nameArray;
+        
+        _textField = [[UITextField alloc]initWithFrame:CGRectMake(50, 50, 220, 80)];
+        _textField.delegate = self;
+        _textField.placeholder = @"请输入名字";
+        _textField.backgroundColor = [UIColor whiteColor];
+        //[_textField addTarget:self action:@selector(tableViewDropDown) forControlEvents:UIControlEventAllTouchEvents];
+        [self addSubview:_textField];
+        
+        _nameTableView = [[UITableView alloc]initWithFrame:CGRectMake(50, 130, 220, 200)];
+        _nameTableView.dataSource = self;
+        _nameTableView.delegate = self;
+        _nameTableView.hidden = YES;
+        [self addSubview:_nameTableView];
+        
+        [self addGesture];
     }
     return self;
 }
- */
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    _cardView = [[UIImageView alloc]initWithFrame:self.view.frame];
-    _cardView.backgroundColor = [UIColor yellowColor];
-    _cardView.image = [UIImage imageNamed:@"big0"];
-    [self.view addSubview:_cardView];
-    
-    PXDataKeeper *dataKeeper = [PXDataKeeper sharedInstance];
-    [dataKeeper getData];
-    _nameArray = dataKeeper.nameArray;
-    
-    _textField = [[UITextField alloc]initWithFrame:CGRectMake(50, 50, 220, 80)];
-    _textField.delegate = self;
-    _textField.placeholder = @"请输入名字";
-    _textField.backgroundColor = [UIColor whiteColor];
-    //[_textField addTarget:self action:@selector(tableViewDropDown) forControlEvents:UIControlEventAllTouchEvents];
-    [self.view addSubview:_textField];
-    
-    _nameTableView = [[UITableView alloc]initWithFrame:CGRectMake(50, 130, 220, 200)];
-    _nameTableView.dataSource = self;
-    _nameTableView.delegate = self;
-    _nameTableView.hidden = YES;
-    [self.view addSubview:_nameTableView];
-    
-    [self addGesture];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
-/*
-- (void)tableViewDropDown
-{
-    self.nameTableView.hidden = NO;
-}
- */
 
 -(void)addGesture
 {
-    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(pushVC)];
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(remove)];
     swipe.direction = UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:swipe];
+    [self addGestureRecognizer:swipe];
 }
 
-- (void)pushVC  //在里面实现保存数据和跳转
+- (void)remove  //在里面实现保存数据和返回
 {
     int i = 1;
     for (NSString* name in self.nameArray)
@@ -86,14 +64,13 @@
         [[PXDataKeeper sharedInstance]addObject:self.textField.text];
         [[PXDataKeeper sharedInstance]saveData];
     }
-    
-    [self.navigationController popViewControllerAnimated:YES];
+    [self removeFromSuperview];
     
 }
 #pragma mark TextFieldDelegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [self pushVC];
+    [self remove];
     return YES;
 }
 
@@ -141,5 +118,6 @@
 {
     [self.textField resignFirstResponder];
 }
+
 
 @end

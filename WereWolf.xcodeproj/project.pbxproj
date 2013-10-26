@@ -88,6 +88,7 @@
 		DBA6AAFE181B56D300BF9664 /* PXDataKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AAFD181B56D300BF9664 /* PXDataKeeper.m */; };
 		DBA6AB01181B56F600BF9664 /* PXTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AB00181B56F600BF9664 /* PXTextInputViewController.m */; };
 		DBA6AB03181B608C00BF9664 /* 输入框.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA6AB02181B608C00BF9664 /* 输入框.png */; };
+		DBA6AB06181B703400BF9664 /* PXInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AB05181B703400BF9664 /* PXInputView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +203,8 @@
 		DBA6AAFF181B56F600BF9664 /* PXTextInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXTextInputViewController.h; sourceTree = "<group>"; };
 		DBA6AB00181B56F600BF9664 /* PXTextInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXTextInputViewController.m; sourceTree = "<group>"; };
 		DBA6AB02181B608C00BF9664 /* 输入框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "输入框.png"; sourceTree = "<group>"; };
+		DBA6AB04181B703400BF9664 /* PXInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXInputView.h; sourceTree = "<group>"; };
+		DBA6AB05181B703400BF9664 /* PXInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXInputView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -484,6 +487,8 @@
 				DBA6AAFD181B56D300BF9664 /* PXDataKeeper.m */,
 				DBA6AAF9181B568B00BF9664 /* PXAlertView.h */,
 				DBA6AAFA181B568B00BF9664 /* PXAlertView.m */,
+				DBA6AB04181B703400BF9664 /* PXInputView.h */,
+				DBA6AB05181B703400BF9664 /* PXInputView.m */,
 			);
 			name = Vendor;
 			sourceTree = "<group>";
@@ -640,6 +645,7 @@
 				8106FDF7181A74A400DBC5E9 /* PXRoleManager.m in Sources */,
 				8106FD81181A3DA700DBC5E9 /* PXAppDelegate.m in Sources */,
 				8106FE3C181AE0F600DBC5E9 /* PXWitchViewController.m in Sources */,
+				DBA6AB06181B703400BF9664 /* PXInputView.m in Sources */,
 				DBA6AAFB181B568B00BF9664 /* PXAlertView.m in Sources */,
 				8106FE39181AE0E500DBC5E9 /* PXWolfViewController.m in Sources */,
 				8106FE0B181AA98600DBC5E9 /* PXStoryViewController.m in Sources */,
