@@ -1,0 +1,153 @@
+//
+//  PXRoleManager.m
+//  WereWolf
+//
+//  Created by 朱泌丞 on 13-10-25.
+//  Copyright (c) 2013年 朱泌丞. All rights reserved.
+//
+
+#import "PXRoleManager.h"
+#import "PXRole.h"
+#import "PXStoryViewController.h"
+static PXRoleManager *instance = nil;
+
+@interface PXRoleManager()
+{
+    BOOL _witchIsChosen;
+    BOOL _gurafIsChosen;
+    BOOL _cupidIsChosen;
+    BOOL _predictIsChosen;
+    BOOL _hunterIsChosen;
+    BOOL _girlIsChosen;
+    
+}
+
+@end
+@implementation PXRoleManager
++(id)defaultManager
+{
+    @synchronized (self){
+        if (instance == nil) {
+            NSArray *specialRole = @[[NSNumber numberWithBool:YES],[NSNumber numberWithBool:YES],[NSNumber numberWithBool:YES],[NSNumber numberWithBool:NO],[NSNumber numberWithBool:NO],[NSNumber numberWithBool:NO]];
+            instance = [[PXRoleManager alloc] initWithSumNum:8 andPeopleNum:3 andWolfNum:2 andSpecialRoles:specialRole];
+        }
+    }
+    return instance;
+}
+-(id)initWithSumNum:(NSInteger)sumNum andPeopleNum:(NSInteger)peopleNum andWolfNum:(NSInteger)wolfNum andSpecialRoles:(NSArray *)specialRoles
+{
+    instance = [super init];
+    if (instance) {
+    }
+    self.sumNum = sumNum;
+    self.peopleNum = peopleNum;
+    self.wolfNum = wolfNum;
+    _witchIsChosen = [[specialRoles objectAtIndex:0] boolValue];
+    _gurafIsChosen = [[specialRoles objectAtIndex:1] boolValue];
+    _cupidIsChosen = [[specialRoles objectAtIndex:2] boolValue];
+    _predictIsChosen = [[specialRoles objectAtIndex:3] boolValue];
+    _hunterIsChosen = [[specialRoles objectAtIndex:4] boolValue];
+    _girlIsChosen = [[specialRoles objectAtIndex:5] boolValue];
+    [self createRolesWithSpecialRoles:specialRoles];
+    return instance;
+}
+
+-(void)createRolesWithSpecialRoles:(NSArray *)specialRoles
+{
+    int tag = 0;
+    self.roles = [[NSMutableArray alloc] init];
+    for (int i = 0; i < self.wolfNum; i++) {
+        PXRole *role = [[PXRole alloc] initRoleWithRoleType:PXRoleTypeWolf andTag:tag++];
+        [self.roles addObject:role];
+    }
+    for (int i = 0 ; i < self.peopleNum; i++) {
+        PXRole *role = [[PXRole alloc] initRoleWithRoleType:PXRoleTypePeople andTag:tag++];
+        [self.roles addObject:role];
+    }
+    int type = 2;
+    for (NSNumber *specialRole in specialRoles) {
+        if ([specialRole boolValue]) {
+            PXRole *role = [[PXRole alloc] initRoleWithRoleType:type andTag:tag++];
+            [self.roles addObject:role];
+        }
+        type++;
+    }
+    
+}
+-(NSString *)description
+{
+    return  [NSString stringWithFormat:@"%@",self.roles];
+}
+-(PXStoryType)getNextStoryTypeFromCurrentType:(PXStoryType)currentType
+{
+    PXStoryType storyType = 4;
+    
+    NSLog(@"%d",currentType);
+    switch (currentType) {
+        case PXStoryTypeStart:{
+            if (_cupidIsChosen) {
+                return PXStoryTypeCupid;
+            }
+            if (_gurafIsChosen) {
+                return PXStoryTypeGuard;
+            }
+            if (_predictIsChosen) {
+                return PXStoryTypePredict;
+            }
+            break;
+        }
+        case PXStoryTypeCupid:{
+            if (_gurafIsChosen) {
+                return PXStoryTypeGuard;
+            }
+            if (_predictIsChosen) {
+                return PXStoryTypePredict;
+            }
+            break;
+        }
+        case PXStoryTypeGuard:{
+            if (_predictIsChosen) {
+                return PXStoryTypePredict;
+            }
+            break;
+        }
+        case PXStoryTypeWolf:{
+            if (_witchIsChosen) {
+                return PXStoryTypeWitch;
+            }
+            return PXStoryTypePeople;
+            break;
+        }
+        case PXStoryTypeWitch:{
+            return PXStoryTypePeople;
+            break;
+        }
+        case PXStoryTypePeople:{
+            if (_gurafIsChosen) {
+                return PXStoryTypeGuard;
+            }
+            if (_predictIsChosen) {
+                return PXStoryTypePredict;
+            }
+            break;
+        }
+        default:
+            break;
+    }
+    return storyType;
+}
+-(PXRoleType)getRoleTypeWithTag:(NSInteger)tag
+{
+    PXRole *role = [self.roles objectAtIndex:tag];
+    PXRoleType type = role.type;
+    return type;
+}
+-(void)changeRoleTag:(NSInteger)tag ToStatus:(PXRoleStatus)status
+{
+    PXRole *role = [self.roles objectAtIndex:tag];
+    role.status = status;
+}
+@end
+
+
+

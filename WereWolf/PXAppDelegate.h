@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PXAppDelegate : UIResponder <UIApplicationDelegate>
+@interface PXAppDelegate : UIResponder <UIApplicationDelegate,UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

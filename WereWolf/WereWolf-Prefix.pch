@@ -13,4 +13,31 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    typedef enum{
+        PXRoleTypeWolf =    0,
+        PXRoleTypePeople =  1,
+        PXRoleTypeWitch =   2,
+        PXRoleTypeGuard =   3,
+        PXRoleTypeCupid =   4,
+        PXRoleTypePredict = 5,
+        PXRoleTypeHunter =  6,
+        PXRoleTypeGirl =    7,
+    }PXRoleType;
+
+    typedef enum{
+        PXStoryTypeStart =   0,
+        PXStoryTypeCupid =   1,
+        PXStoryTypeGuard =   2,
+        PXStoryTypePredict = 3,
+        PXStoryTypeWolf =    4,
+        PXStoryTypeWitch =   5,
+        PXStoryTypePeople =  6,
+    }PXStoryType;
+
+    typedef enum{
+        PxRoleStatusDead =    0,
+        PXRoleStatusAlive =   1,
+        PxRoleStatusIsGuard = 2,
+        PxRoleStatusCupid =   3,
+    }PXRoleStatus;
 #endif

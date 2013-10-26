@@ -7,14 +7,20 @@
 //
 
 #import "PXAppDelegate.h"
-
+#import "PXMianViewController.h"
 @implementation PXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    PXMianViewController *mainVC = [[PXMianViewController alloc] init];
+    UINavigationController *mainNavigationVC = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    mainNavigationVC.navigationBarHidden = YES;
     self.window.backgroundColor = [UIColor whiteColor];
+    mainNavigationVC.interactivePopGestureRecognizer.delegate = self;
+    mainNavigationVC.interactivePopGestureRecognizer.enabled = YES;
+    self.window.rootViewController = mainNavigationVC;
     [self.window makeKeyAndVisible];
     return YES;
 }
