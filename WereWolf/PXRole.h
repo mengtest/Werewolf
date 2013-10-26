@@ -13,6 +13,6 @@
 @property NSString *name;
 @property PXRoleType type;
 @property PXRoleStatus status;
-@property PXRoleType life;
+@property PXRoleLife life;
 -(id)initRoleWithRoleType:(NSInteger)type andTag:(NSInteger)tag;
 @end

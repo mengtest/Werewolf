@@ -9,6 +9,7 @@
 #import "PXFunctionViewController.h"
 #import "CardDetailButton.h"
 #import "PXStoryViewController.h"
+#import "PXOverViewController.h"
 #define originX 36
 #define originX2 186
 #define originY 20
@@ -50,15 +51,21 @@
 }
 -(void)nextVC:(UISwipeGestureRecognizer *)sender
 {
-    PXStoryType type = [self.manager getNextStoryTypeFromCurrentType:self.type];
-    PXStoryViewController *storyVC = [[PXStoryViewController alloc] init];
-    storyVC.type = type;
-    [self.navigationController pushViewController:storyVC animated:YES];
+    PXGameStatus status = [self.manager getGameStatus];
+    if (status&&self.type == PXStoryTypePeople) {
+        PXOverViewController *overVC = [[PXOverViewController alloc]init];
+        overVC.status = status;
+    }else{
+        PXStoryType type = [self.manager getNextStoryTypeFromCurrentType:self.type];
+        PXStoryViewController *storyVC = [[PXStoryViewController alloc] init];
+        storyVC.type = type;
+        [self.navigationController pushViewController:storyVC animated:YES];
+    }
 }
 -(void)initCard
 {
     NSInteger sumNum = self.manager.sumNum;
-    [self.scrollView setContentSize:CGSizeMake(320, originY + sumNum / 2 * heightGap + 50)];
+    [self.scrollView setContentSize:CGSizeMake(320, originY + (sumNum + 1) / 2 * heightGap + 50)];
     for (int i = 0; i < sumNum; i++) {
         float x = i % 2?originX2:originX;
         CardDetailButton *button = [[CardDetailButton alloc] initWithFrame:CGRectMake(x, originY + i / 2 * heightGap, weith, height)];
@@ -73,7 +80,7 @@
         if (status == PXRoleStatusIsGuard) {
             button.secondImage.image = [UIImage imageNamed:@"shield"];
         }
-        if (status == PXRoleStatusDead) {
+        if (status == PXRoleStatusDead||status == PXRoleStatusTotalDead) {
             button.secondImage.image = [UIImage imageNamed:@"ghost"];
         }
         button.lable.text = [self.manager getRoleNameWithTag:i];
