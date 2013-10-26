@@ -34,7 +34,7 @@
     for (CardDetailButton *button in self.buttonArray) {
         if (button.tag == tag) {
             button.secondImage.image = [UIImage imageNamed:@"shield"];
-            [self.manager changeRoleTag:tag ToStatus:PxRoleStatusIsGuard];
+            [self.manager changeRoleTag:tag ToStatus:PXRoleStatusIsGuard];
         }
     }
 }

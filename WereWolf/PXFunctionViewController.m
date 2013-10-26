@@ -70,10 +70,10 @@
         [button setBackgroundImage:[UIImage imageNamed:@"cardBackName"] forState:UIControlStateNormal];
         
         PXRoleStatus status = [self.manager getRoleStatusWithTag:button.tag];
-        if (status == PxRoleStatusIsGuard) {
+        if (status == PXRoleStatusIsGuard) {
             button.secondImage.image = [UIImage imageNamed:@"shield"];
         }
-        if (status == PxRoleStatusDead) {
+        if (status == PXRoleStatusDead) {
             button.secondImage.image = [UIImage imageNamed:@"ghost"];
         }
         [self.scrollView addSubview:button];

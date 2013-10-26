@@ -8,6 +8,6 @@
 
 #import "PXFunctionViewController.h"
 
-@interface PXPredictViewController : PXFunctionViewController
+@interface PXPredictViewController : PXFunctionViewController<PXFunctionDelegate>
 
 @end

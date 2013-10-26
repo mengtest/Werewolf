@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chooseBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="XNa-cl-V5f">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <rect key="frame" x="-3" y="0.0" width="320" height="480"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAh-Jt-Z56">
@@ -109,9 +109,10 @@
                     <rect key="frame" x="47" y="165" width="33" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <state key="normal" image="chooseAddS.png">
+                    <state key="normal" image="chooseAdd.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <state key="highlighted" image="chooseAddS.png"/>
                     <connections>
                         <action selector="changeNum:" destination="-1" eventType="touchUpInside" id="SMq-2n-3AU"/>
                     </connections>
@@ -131,9 +132,10 @@
                     <rect key="frame" x="189" y="165" width="33" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <state key="normal" image="chooseAddS.png">
+                    <state key="normal" image="chooseAdd.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <state key="highlighted" image="chooseAddS.png"/>
                     <connections>
                         <action selector="changeNum:" destination="-1" eventType="touchUpInside" id="yKq-ak-Et4"/>
                     </connections>
@@ -202,7 +204,8 @@
         <image name="choose06m.png" width="119" height="38"/>
         <image name="choose06q.png" width="134" height="134"/>
         <image name="choose07q.png" width="300" height="300"/>
-        <image name="chooseAddS.png" width="48" height="48"/>
+        <image name="chooseAdd.png" width="41" height="38"/>
+        <image name="chooseAddS.png" width="41" height="38"/>
         <image name="chooseBG.png" width="640" height="960"/>
         <image name="chooseMinS.png" width="48" height="48"/>
         <image name="chooseStart.png" width="287" height="93"/>

@@ -19,6 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.delegate = self;
     }
     return self;
 }
@@ -28,7 +29,15 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
-
+-(void)didSelectedButton:(NSInteger)tag
+{
+    for (CardDetailButton *button in self.buttonArray) {
+        if (button.tag == tag) {
+            button.secondImage.image = [UIImage imageNamed:@"ghost"];
+            [self.manager changeRoleTag:tag ToStatus:PXRoleStatusDead];
+        }
+    }
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

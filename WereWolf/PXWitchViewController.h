@@ -8,6 +8,6 @@
 
 #import "PXFunctionViewController.h"
 
-@interface PXWitchViewController : PXFunctionViewController
+@interface PXWitchViewController : PXFunctionViewController<PXFunctionDelegate>
 
 @end
