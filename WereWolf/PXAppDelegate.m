@@ -8,6 +8,8 @@
 
 #import "PXAppDelegate.h"
 #import "PXMianViewController.h"
+#import "BaiduMobStat.h"
+#import <BaiduSocialShare/BDSocialShareSDK.h>
 @implementation PXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -16,6 +18,16 @@
     // Override point for customization after application launch.
     PXMianViewController *mainVC = [[PXMianViewController alloc] init];
     UINavigationController *mainNavigationVC = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    
+    BaiduMobStat* stat = [BaiduMobStat defaultStat];
+    [stat startWithAppId:baiduAppKey];
+    
+    NSArray *platforms = [NSArray arrayWithObjects:kBD_SOCIAL_SHARE_PLATFORM_SINAWEIBO,kBD_SOCIAL_SHARE_PLATFORM_QQWEIBO,kBD_SOCIAL_SHARE_PLATFORM_QQZONE,kBD_SOCIAL_SHARE_PLATFORM_KAIXIN,kBD_SOCIAL_SHARE_PLATFORM_RENREN,kBD_SOCIAL_SHARE_PLATFORM_WEIXIN_SESSION,kBD_SOCIAL_SHARE_PLATFORM_WEIXIN_TIMELINE,
+                          kBD_SOCIAL_SHARE_PLATFORM_EMAIL,
+                          kBD_SOCIAL_SHARE_PLATFORM_SMS,nil];
+    [BDSocialShareSDK registerApiKey:@"QHlQGgIjPeg188u44Sv81SxS" andSupportPlatforms:platforms];
+    [BDSocialShareSDK registerWXApp:@"23bdbcfd5e7aa34e9e9adb375e81ddbb"];
+    
     mainNavigationVC.navigationBarHidden = YES;
     self.window.backgroundColor = [UIColor whiteColor];
     mainNavigationVC.interactivePopGestureRecognizer.delegate = self;

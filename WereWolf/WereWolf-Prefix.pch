@@ -13,6 +13,7 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+#define baiduAppKey @"f64b703145"
     typedef enum{
         PXRoleTypeWolf =    0,
         PXRoleTypePeople =  1,
@@ -40,8 +41,16 @@
         PXRoleStatusAlive =      1,
         PXRoleStatusIsGuard =    2,
     }PXRoleStatus;
+
     typedef enum{
         PXRoleLifeNormal = 0,
         PXRoleLifeCupid  = 1,
     }PXRoleLife;
+
+typedef enum{
+    PXGameStatusNormal = 0,
+    PXGameStatusPeopleWin = 1,
+    PXGameStatusWolfWin = 2,
+    PXGameStatusCupidWin = 3,
+}PXGameStatus;
 #endif

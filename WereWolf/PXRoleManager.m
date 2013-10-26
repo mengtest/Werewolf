@@ -159,6 +159,55 @@ static PXRoleManager *instance = nil;
 {
     PXRole *role = [self.roles objectAtIndex:tag];
     role.status = status;
+    if (status == PXRoleStatusDead) {
+        PXRoleType type = [self getRoleTypeWithTag:tag];
+        switch (type) {
+            case PXRoleTypeCupid:
+                _cupidIsChosen = NO;
+                break;
+            case PXRoleTypeGirl:
+                _girlIsChosen = NO;
+                break;
+            case PXRoleTypeHunter:
+                _hunterIsChosen = NO;
+                break;
+            case PXRoleTypePredict:
+                _predictIsChosen = NO;
+                break;
+            case PXRoleTypeGuard:
+                _gurafIsChosen = NO;
+                break;
+            case PXRoleTypeWitch:
+                _witchIsChosen = NO;
+                break;
+            default:
+                break;
+        }
+    }else if(status == PXRoleStatusAlive){
+        PXRoleType type = [self getRoleTypeWithTag:tag];
+        switch (type) {
+            case PXRoleTypeCupid:
+                _cupidIsChosen = YES;
+                break;
+            case PXRoleTypeGirl:
+                _girlIsChosen = YES;
+                break;
+            case PXRoleTypeHunter:
+                _hunterIsChosen = YES;
+                break;
+            case PXRoleTypePredict:
+                _predictIsChosen = YES;
+                break;
+            case PXRoleTypeGuard:
+                _girlIsChosen = YES;
+                break;
+            case PXRoleTypeWitch:
+                _witchIsChosen = YES;
+                break;
+            default:
+                break;
+        }
+    }
 }
 -(void)changeRoleTag:(NSInteger)tag ToLife:(PXRoleLife)life
 {
@@ -169,6 +218,69 @@ static PXRoleManager *instance = nil;
 {
     PXRole *role = [self.roles objectAtIndex:tag];
     role.name = name;
+}
+-(PXGameStatus)getGameStatus
+{
+    PXGameStatus status = PXGameStatusNormal;
+    NSInteger peopleAliveNum = 0;
+    NSInteger wolfAliveNum = 0;
+    NSInteger cupidNum = 0;
+    BOOL isCupidWin = NO;
+    [self cleanRoleStatus];
+    for (PXRole *role in self.roles) {
+        PXRoleStatus status = role.status;
+        PXRoleType type = role.type;
+        PXRoleLife life = role.life;
+        if (status == PXRoleStatusAlive&&type == PXRoleTypeWolf) {
+            wolfAliveNum++;
+        }
+        if (status == PXRoleStatusAlive&&type != PXRoleTypeWolf) {
+            peopleAliveNum++;
+        }
+        if (life == PXRoleLifeCupid&&status == PXRoleStatusAlive) {
+            cupidNum++;
+            if (type == PXRoleTypeWolf) {
+                isCupidWin = YES;
+            }
+        }
+    }
+    if (wolfAliveNum == 0) {
+        return PXGameStatusPeopleWin;
+    }
+    if (peopleAliveNum == 0) {
+        return PXGameStatusWolfWin;
+    }
+    if (cupidNum == 2&&isCupidWin) {
+        return PXGameStatusCupidWin;
+    }
+    NSLog(@"status:%d",status);
+    return status;
+}
+-(void)cleanRoleStatus
+{
+    BOOL cupidIsDead = NO;
+    for (PXRole *role  in self.roles) {
+        PXRoleStatus status = role.status;
+        PXRoleLife life = role.life;
+        if (status == PXRoleStatusDead) {
+            if (life == PXRoleLifeCupid) {
+                cupidIsDead = YES;
+            }
+            role.status = PXRoleStatusTotalDead;
+        }
+        if (status == PXRoleStatusIsGuard) {
+            role.status = PXRoleStatusAlive;
+        }
+
+    }
+    if (cupidIsDead) {
+        for (PXRole *role in self.roles) {
+            PXRoleLife life = role.life;
+            if (life == PXRoleLifeCupid) {
+                role.status = PXRoleStatusTotalDead;
+            }
+        }
+    }
 }
 @end
 

@@ -7,17 +7,20 @@
 //
 
 #import "PXStoryViewController.h"
+#import "PXRoleManager.h"
+#import "PXOverViewController.h"
 #import "PXFunctionViewController.h"
 #import "PXCupidViewController.h"
 #import "PXGuardViewController.h"
 #import "PXWitchViewController.h"
 #import "PXWolfViewController.h"
 #import "PXPredictViewController.h"
+#import "PXOverViewController.h"
 @interface PXStoryViewController (){
     NSData *gif;
 }
 @property (weak, nonatomic) IBOutlet UIWebView *gifView;
-
+@property (strong,nonatomic) PXRoleManager *mananger;
 @end
 
 @implementation PXStoryViewController
@@ -27,6 +30,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.mananger = [PXRoleManager defaultManager];
     }
     return self;
 }
@@ -82,9 +86,16 @@
             break;
         }
         case PXStoryTypePeople:{
-            PXWolfViewController *cupid = [[PXWolfViewController alloc] init];
-            cupid.type = PXStoryTypePeople;
-            [self.navigationController pushViewController:cupid animated:YES];
+            PXGameStatus status = [self.mananger getGameStatus];
+            if (status) {
+                PXOverViewController *overVC = [[PXOverViewController alloc] init];
+                overVC.status = status;
+                [self.navigationController pushViewController:overVC animated:YES];
+            }else{
+                PXWolfViewController *cupid = [[PXWolfViewController alloc] init];
+                cupid.type = PXStoryTypePeople;
+                [self.navigationController pushViewController:cupid animated:YES];
+            }
             break;
         }
         default:
@@ -99,10 +110,10 @@
             gitName = @"cupid";
             break;
         case PXStoryTypeGuard:
-            gitName = @"raise";
+            gitName = @"guard";
             break;
         case PXStoryTypePredict:
-            gitName = @"witch";
+            gitName = @"predict";
             break;
         case PXStoryTypeWolf:
             gitName = @"wolf";
