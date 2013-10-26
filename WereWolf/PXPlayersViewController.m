@@ -11,7 +11,7 @@
 #import "PXRoleManager.h"
 #import "PXTextInputViewController.h"
 #import "UIViewController+ADFlipTransition.h"
-#import "PXInputView.h"
+
 
 #define CARD_CONTAINER_WIDTH 320-31-31
 #define CARD_CONTAINER_MARGIN 31.0
