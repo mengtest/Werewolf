@@ -76,6 +76,7 @@
         if (status == PXRoleStatusDead) {
             button.secondImage.image = [UIImage imageNamed:@"ghost"];
         }
+        button.lable.text = [self.manager getRoleNameWithTag:i];
         [self.scrollView addSubview:button];
         [self.buttonArray addObject:button];
     }

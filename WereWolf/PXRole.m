@@ -18,6 +18,8 @@
         self.tag = tag;
         self.status = PXRoleStatusAlive;
         self.life = PXRoleLifeNormal;
+        self.name = [[NSString alloc] init];
+
     }
     return self;
 }

@@ -8,29 +8,39 @@
 
 #import "PXTextInputViewController.h"
 #import "PXDataKeeper.h"
-@interface PXTextInputViewController ()
-
+#import "PXRoleManager.h"
+#import "UIViewController+ADFlipTransition.h"
+@interface PXTextInputViewController (){
+    
+}
+@property (nonatomic,strong) NSMutableArray *nameArray;
+@property (nonatomic,strong) UITextField *textField;
+@property (nonatomic,strong) UITableView *nameTableView;
+@property (nonatomic,strong) UIImageView *cardView;
+@property (nonatomic,strong) PXRoleManager *manager;
 @end
 
 @implementation PXTextInputViewController
 
-/*
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
+        self.manager = [PXRoleManager defaultManager];
     }
     return self;
 }
- */
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     _cardView = [[UIImageView alloc]initWithFrame:self.view.frame];
     _cardView.backgroundColor = [UIColor yellowColor];
-    _cardView.image = [UIImage imageNamed:@"big0"];
+    NSString *picName = [NSString stringWithFormat:@"big%d",self.type];
+    _cardView.image = [UIImage imageNamed:picName];
     [self.view addSubview:_cardView];
     
     PXDataKeeper *dataKeeper = [PXDataKeeper sharedInstance];
@@ -87,8 +97,8 @@
         [[PXDataKeeper sharedInstance]saveData];
     }
     
-    [self.navigationController popViewControllerAnimated:YES];
-    
+    //[self.navigationController popViewControllerAnimated:YES];
+    [self dismissFlipWithCompletion:NULL];
 }
 #pragma mark TextFieldDelegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -140,5 +150,10 @@
 {
     [self.textField resignFirstResponder];
 }
-
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [self.manager changeRoleTag:self.tag ToName:self.textField.text];
+    
+}
 @end

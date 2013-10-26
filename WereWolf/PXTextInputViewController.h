@@ -9,10 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PXTextInputViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
-
-@property (nonatomic,strong) NSMutableArray *nameArray;
-@property (nonatomic,strong) UITextField *textField;
-@property (nonatomic,strong) UITableView *nameTableView;
-@property (nonatomic,strong) UIImageView *cardView;
-
+@property NSInteger tag;
+@property PXRoleType type;
 @end

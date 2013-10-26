@@ -20,12 +20,12 @@
 -(id)initWithSumNum:(NSInteger)sumNum andPeopleNum:(NSInteger)peopleNum andWolfNum:(NSInteger)wolfNum andSpecialRoles:(NSArray *)specialRoles;
 
 -(PXStoryType)getNextStoryTypeFromCurrentType:(PXStoryType)currentType;
-
 -(PXRoleType)getRoleTypeWithTag:(NSInteger)tag;
 -(PXRoleStatus)getRoleStatusWithTag:(NSInteger)tag;
-
+-(NSString *)getRoleNameWithTag:(NSInteger)tag;
 
 -(void)changeRoleTag:(NSInteger)tag ToStatus:(PXRoleStatus)status;
 -(void)changeRoleTag:(NSInteger)tag ToLife:(PXRoleLife)life;
+-(void)changeRoleTag:(NSInteger)tag ToName:(NSString *)name;
 @end
 

@@ -10,6 +10,7 @@
 #import "PXStoryViewController.h"
 #import "PXRoleManager.h"
 #import "PXTextInputViewController.h"
+#import "UIViewController+ADFlipTransition.h"
 #import "PXInputView.h"
 
 #define CARD_CONTAINER_WIDTH 320-31-31
@@ -20,7 +21,9 @@
 #define cardY 155.0
 
 #define startButtonFrame
-@interface PXPlayersViewController ()
+@interface PXPlayersViewController (){
+    NSInteger cardNum;
+}
 @property (nonatomic,strong) NSMutableArray *cardArry;
 @property (nonatomic,strong) PXRoleManager *manager;
 @end
@@ -34,6 +37,7 @@
         // Custom initialization
         self.manager = [PXRoleManager defaultManager];
         self.cardArry = [[NSMutableArray alloc] init];
+        cardNum = self.manager.sumNum;
     }
     return self;
 }
@@ -83,32 +87,67 @@
         [self.cardArry addObject:card];
     }
 }
-
+-(void)loadCardViewWithNumber:(NSInteger)num
+{
+    for (UIView *view in self.cardArry) {
+        [view removeFromSuperview];
+    }
+    [self.cardArry removeAllObjects];
+    if (num <= 0) {
+        [self startGame:nil];
+        return;
+    }
+    int i = 0;
+    for (; i < num; i++) {
+        NSInteger x;
+        if(num==1){
+            x = (320-CARD_WIDTH)/2;
+        }else{
+            x = i*(CARD_CONTAINER_WIDTH - CARD_WIDTH)/(num-1)+CARD_CONTAINER_MARGIN;
+        }
+        UIView *card = [[UIView alloc]initWithFrame:CGRectMake(x, cardY, CARD_WIDTH, CARD_HEIGHT)];
+        UIImageView *backGround = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CARD_WIDTH, CARD_HEIGHT)];
+        backGround.tag = 100;
+        backGround.image = [UIImage imageNamed:@"playerCard"];
+        [card addSubview:backGround];
+        card.backgroundColor = [UIColor clearColor];
+        [self.view addSubview:card];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
+        [tap addTarget:self action:@selector(tapEvent:)];
+        [card addGestureRecognizer:tap];
+        [self.cardArry addObject:card];
+    }
+}
 -(void)tapEvent:(UITapGestureRecognizer *)tap
 {
+    /*
+    CATransition *animation = [CATransition animation];
+    animation.delegate = self;
+    animation.duration =0.5f;
+    animation.timingFunction = UIViewAnimationCurveEaseInOut;
+    animation.type = @"cube";
+    animation.subtype = kCATransitionFromTop;
+     animation.subtype = kCATransitionFromRight;
+    [tap.view.layer addAnimation:animation forKey:@"animation"];
+     */
     
-    UIView *InputView = [[PXInputView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
-    [self.view addSubview:InputView];
 
-    [UIView transitionFromView:tap.view
-                        toView:InputView
-                      duration: 1.0
-                       options: UIViewAnimationOptionTransitionFlipFromLeft+UIViewAnimationOptionCurveEaseInOut
-                    completion:^(BOOL finished) {
-                        if (finished) {
-                            //UIView *view = (displayingPrimary ? view1 : view2);
-                            
-                        }
-                    }
-     ];
+    PXTextInputViewController *inputNameController = [[PXTextInputViewController alloc]init];
+    inputNameController.type = [self.manager getRoleTypeWithTag:cardNum-1];
+    inputNameController.tag = cardNum-1;
+    //[self.navigationController pushViewController:inputNameController animated:YES];
+    [self flipToViewController:inputNameController fromView:tap.view withCompletion:^{
+            [self loadCardViewWithNumber:--cardNum];
+    }];
     
+
+    //UIView *InputView = [[PXInputView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
 
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
+    [self performSelector:@selector(startBeginAinimation) withObject:Nil afterDelay:0.3];
 }
 
 - (void)didReceiveMemoryWarning
@@ -132,7 +171,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self startBeginAinimation];
+    
 }
 #pragma mark - Trace Touch Point
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

@@ -149,6 +149,12 @@ static PXRoleManager *instance = nil;
     PXRoleStatus status = role.status;
     return status;
 }
+-(NSString *)getRoleNameWithTag:(NSInteger)tag
+{
+    PXRole *role = [self.roles objectAtIndex:tag];
+    NSString *name = role.name;
+    return name;
+}
 -(void)changeRoleTag:(NSInteger)tag ToStatus:(PXRoleStatus)status
 {
     PXRole *role = [self.roles objectAtIndex:tag];
@@ -158,6 +164,11 @@ static PXRoleManager *instance = nil;
 {
     PXRole *role = [self.roles objectAtIndex:tag];
     role.life = life;
+}
+-(void)changeRoleTag:(NSInteger)tag ToName:(NSString *)name
+{
+    PXRole *role = [self.roles objectAtIndex:tag];
+    role.name = name;
 }
 @end
 
