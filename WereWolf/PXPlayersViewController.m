@@ -86,13 +86,13 @@
 -(void)tapEvent:(UITapGestureRecognizer *)tap
 {
     
-    UIView *InputView = [[PXInputView alloc]initWithFrame:CGRectMake(100, 0, 160, 240)];
+    UIView *InputView = [[PXInputView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
     [self.view addSubview:InputView];
 
     [UIView transitionFromView:tap.view
                         toView:InputView
-                      duration: 0.5
-                       options: UIViewAnimationOptionTransitionFlipFromRight+UIViewAnimationOptionCurveEaseInOut
+                      duration: 1.0
+                       options: UIViewAnimationOptionTransitionFlipFromLeft+UIViewAnimationOptionCurveEaseInOut
                     completion:^(BOOL finished) {
                         if (finished) {
                             //UIView *view = (displayingPrimary ? view1 : view2);
