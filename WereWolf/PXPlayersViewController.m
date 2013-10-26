@@ -12,6 +12,7 @@
 #import "PXTextInputViewController.h"
 #import "UIViewController+ADFlipTransition.h"
 #import "PXInputView.h"
+
 #define CARD_CONTAINER_WIDTH 320-31-31
 #define CARD_CONTAINER_MARGIN 31.0
 #define CARD_WIDTH  136.5
@@ -101,6 +102,25 @@
     [self flipToViewController:inputNameController fromView:tap.view withCompletion:NULL];
     //UIView *InputView = [[PXInputView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
     //[self.view addSubview:InputView];
+//=======
+//    
+//    UIView *InputView = [[PXInputView alloc]initWithFrame:CGRectMake(100, 0, 160, 240)];
+//    [self.view addSubview:InputView];
+//
+//    [UIView transitionFromView:tap.view
+//                        toView:InputView
+//                      duration: 0.5
+//                       options: UIViewAnimationOptionTransitionFlipFromRight+UIViewAnimationOptionCurveEaseInOut
+//                    completion:^(BOOL finished) {
+//                        if (finished) {
+//                            //UIView *view = (displayingPrimary ? view1 : view2);
+//                            
+//                        }
+//                    }
+//     ];
+//    
+//
+//>>>>>>> b90e54ffbaffa285c7e96ebeddb785b3120391b0
 }
 - (void)viewDidLoad
 {
@@ -269,5 +289,7 @@
         [UIView commitAnimations];
     }
 }
+
+
 
 @end

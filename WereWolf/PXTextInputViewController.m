@@ -69,7 +69,7 @@
 -(void)addGesture
 {
     UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(pushVC)];
-    swipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    swipe.direction = UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:swipe];
 }
 
@@ -101,7 +101,6 @@
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     self.nameTableView.hidden = NO;
-    //CGRect frame = self.textField.frame;
     return YES;
 }
 
