@@ -955,17 +955,17 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/BaiduSocialShare,
+					"${SRCROOT}/WereWolf/BaiduSocialShare",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WereWolf/WereWolf-Prefix.pch";
 				INFOPLIST_FILE = "WereWolf/WereWolf-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/BaiduSocialShare/WB,
-					/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/BaiduSocialShare/WX,
-					"/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/Release-iphonesimulator",
-					"/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/universal-bin",
+					"${SRCROOT}/WereWolf/BaiduSocialShare/WB",
+					"${SRCROOT}/WereWolf/BaiduSocialShare/WX",
+					"${SRCROOT}/WereWolf/Release-iphonesimulator",
+					"${SRCROOT}/WereWolf/universal-bin",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				"OTHER_LDFLAGS[arch=*]" = "-all_load";
@@ -981,17 +981,17 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/BaiduSocialShare,
+					"${SRCROOT}/WereWolf/BaiduSocialShare",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WereWolf/WereWolf-Prefix.pch";
 				INFOPLIST_FILE = "WereWolf/WereWolf-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/BaiduSocialShare/WB,
-					/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/BaiduSocialShare/WX,
-					"/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/Release-iphonesimulator",
-					"/Users/zhubicheng/Project/Wolf/WereWolf/WereWolf/universal-bin",
+					"${SRCROOT}/WereWolf/BaiduSocialShare/WB",
+					"${SRCROOT}/WereWolf/BaiduSocialShare/WX",
+					"${SRCROOT}/WereWolf/Release-iphonesimulator",
+					"${SRCROOT}/WereWolf/universal-bin",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				"OTHER_LDFLAGS[arch=*]" = "-all_load";

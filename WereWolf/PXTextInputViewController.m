@@ -47,16 +47,23 @@
     [dataKeeper getData];
     _nameArray = dataKeeper.nameArray;
     
-    _textField = [[UITextField alloc]initWithFrame:CGRectMake(50, 50, 220, 80)];
+    _textField = [[UITextField alloc]initWithFrame:CGRectMake(57, 436, 206, 44)];
     _textField.delegate = self;
     _textField.placeholder = @"请输入名字";
     _textField.backgroundColor = [UIColor whiteColor];
-    //[_textField addTarget:self action:@selector(tableViewDropDown) forControlEvents:UIControlEventAllTouchEvents];
+    _textField.borderStyle = UITextBorderStyleNone;//设置文本框的边框风格
+    _textField.textColor = [UIColor blackColor];
+    _textField.font = [UIFont systemFontOfSize:22];
+    _textField.background = [UIImage imageNamed:@"输入框"];
+    _textField.textAlignment = NSTextAlignmentCenter;
+    _textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     [self.view addSubview:_textField];
     
-    _nameTableView = [[UITableView alloc]initWithFrame:CGRectMake(50, 130, 220, 200)];
+    _nameTableView = [[UITableView alloc]initWithFrame:CGRectMake(50, 130+44, 220, 200)];
     _nameTableView.dataSource = self;
     _nameTableView.delegate = self;
+    _nameTableView.backgroundColor = [UIColor colorWithRed:160/250.0 green:129/250.0 blue:101/250.0 alpha:1];
+    _nameTableView.separatorColor = [UIColor blackColor];
     _nameTableView.hidden = YES;
     [self.view addSubview:_nameTableView];
     
@@ -108,6 +115,12 @@
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
+    CGRect frame = self.textField.frame;
+    if (frame.origin.y != 130)
+    {
+        frame.origin.y = 130;
+        self.textField.frame = frame;
+    }
     self.nameTableView.hidden = NO;
     return YES;
 }
@@ -124,6 +137,11 @@
     return [self.nameArray count];
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 35;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIndentifier = @"name";
@@ -134,6 +152,11 @@
     }
     
     cell.textLabel.text = [self.nameArray objectAtIndex:indexPath.row];
+    cell.textLabel.font = [UIFont systemFontOfSize:16.0f];
+    cell.backgroundColor = [UIColor colorWithRed:160/250.0 green:129/250.0 blue:101/250.0 alpha:1];
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    cell.selectionStyle = UITableViewCellSelectionStyleGray;
+
     return cell;
 }
 
