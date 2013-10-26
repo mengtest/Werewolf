@@ -106,6 +106,9 @@
         case PXStoryTypeWolf:
             gitName = @"wolf";
             break;
+        case PXStoryTypeWitch:
+            gitName = @"witch";
+            break;
         case PXStoryTypePeople:
             gitName = @"raise";
         default:
@@ -114,9 +117,10 @@
     
     return gitName;
 }
--(void)viewDidAppear:(BOOL)animated
+-(void)viewDidDisappear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    [super viewDidDisappear:animated];
+    [self.gifView removeFromSuperview];
     self.gifView = nil;
 }
 - (void)didReceiveMemoryWarning

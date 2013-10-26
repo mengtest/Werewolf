@@ -35,9 +35,10 @@
     }PXStoryType;
 
     typedef enum{
-        PxRoleStatusDead =    0,
-        PXRoleStatusAlive =   1,
-        PxRoleStatusIsGuard = 2,
-        PxRoleStatusCupid =   3,
+        PXRoleStatusTotalDead = -1,
+        PXRoleStatusDead =       0,
+        PXRoleStatusAlive =      1,
+        PXRoleStatusIsGuard =    2,
+        PXRoleStatusCupid =      3,
     }PXRoleStatus;
 #endif

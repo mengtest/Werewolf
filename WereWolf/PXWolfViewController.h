@@ -8,6 +8,6 @@
 
 #import "PXFunctionViewController.h"
 
-@interface PXWolfViewController : PXFunctionViewController
+@interface PXWolfViewController : PXFunctionViewController<PXFunctionDelegate>
 
 @end

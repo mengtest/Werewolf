@@ -19,6 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.delegate = self;
     }
     return self;
 }
@@ -27,6 +28,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+-(void)didSelectedButton:(NSInteger)tag
+{
+    for (CardDetailButton *button in self.buttonArray) {
+        if (button.tag == tag) {
+            UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+            PXRoleType type = [self.manager getRoleTypeWithTag:tag];
+            NSString *text = type?@"好人":@"坏人";
+            lable.text = text;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning

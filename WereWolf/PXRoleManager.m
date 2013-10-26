@@ -19,7 +19,6 @@ static PXRoleManager *instance = nil;
     BOOL _predictIsChosen;
     BOOL _hunterIsChosen;
     BOOL _girlIsChosen;
-    
 }
 
 @end
@@ -39,6 +38,7 @@ static PXRoleManager *instance = nil;
     instance = [super init];
     if (instance) {
     }
+    self.isFirstStory = YES;
     self.sumNum = sumNum;
     self.peopleNum = peopleNum;
     self.wolfNum = wolfNum;
@@ -84,23 +84,24 @@ static PXRoleManager *instance = nil;
     
     switch (currentType) {
         case PXStoryTypeStart:{
-            if (_cupidIsChosen) {
-                storyType =  PXStoryTypeCupid;
+            if (_predictIsChosen) {
+                storyType = PXStoryTypePredict;
             }
             if (_gurafIsChosen) {
                 storyType = PXStoryTypeGuard;
             }
-            if (_predictIsChosen) {
-                storyType = PXStoryTypePredict;
+            if (_cupidIsChosen&&self.isFirstStory) {
+                storyType =  PXStoryTypeCupid;
+                self.isFirstStory = NO;
             }
             break;
         }
         case PXStoryTypeCupid:{
-            if (_gurafIsChosen) {
-                storyType =  PXStoryTypeGuard;
-            }
             if (_predictIsChosen) {
                 storyType = PXStoryTypePredict;
+            }
+            if (_gurafIsChosen) {
+                storyType =  PXStoryTypeGuard;
             }
             break;
         }
@@ -111,10 +112,10 @@ static PXRoleManager *instance = nil;
             break;
         }
         case PXStoryTypeWolf:{
+            storyType = PXStoryTypePeople;
             if (_witchIsChosen) {
                 storyType = PXStoryTypeWitch;
             }
-            storyType = PXStoryTypePeople;
             break;
         }
         case PXStoryTypeWitch:{
@@ -122,11 +123,11 @@ static PXRoleManager *instance = nil;
             break;
         }
         case PXStoryTypePeople:{
-            if (_gurafIsChosen) {
-                storyType = PXStoryTypeGuard;
-            }
             if (_predictIsChosen) {
                 storyType = PXStoryTypePredict;
+            }
+            if (_gurafIsChosen) {
+                storyType = PXStoryTypeGuard;
             }
             break;
         }

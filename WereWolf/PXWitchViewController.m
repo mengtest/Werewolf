@@ -19,6 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.delegate = self;
     }
     return self;
 }
@@ -28,7 +29,22 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
-
+-(void)didSelectedButton:(NSInteger)tag
+{
+    for (CardDetailButton *button in self.buttonArray) {
+        if (button.tag == tag) {
+            PXStoryType status = [self.manager getRoleStatusWithTag:tag];
+            if (status == PXRoleStatusDead) {
+                [self.manager changeRoleTag:tag ToStatus:PXRoleStatusAlive];
+                button.secondImage.image = nil;
+            }
+            if (status == PXRoleStatusCupid||status == PXRoleStatusAlive) {
+                [self.manager changeRoleTag:tag ToStatus:PXRoleStatusDead];
+                button.secondImage.image = [UIImage imageNamed:@"ghost"];
+            }
+        }
+    }
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -12,6 +12,7 @@
 @property NSInteger sumNum;
 @property NSInteger peopleNum;
 @property NSInteger wolfNum;
+@property BOOL isFirstStory;
 
 @property (nonatomic,strong) NSMutableArray *roles;
 
