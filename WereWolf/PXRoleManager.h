@@ -26,5 +26,6 @@
 
 
 -(void)changeRoleTag:(NSInteger)tag ToStatus:(PXRoleStatus)status;
+-(void)changeRoleTag:(NSInteger)tag ToLife:(PXRoleLife)life;
 @end
 

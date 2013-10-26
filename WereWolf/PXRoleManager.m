@@ -154,6 +154,11 @@ static PXRoleManager *instance = nil;
     PXRole *role = [self.roles objectAtIndex:tag];
     role.status = status;
 }
+-(void)changeRoleTag:(NSInteger)tag ToLife:(PXRoleLife)life
+{
+    PXRole *role = [self.roles objectAtIndex:tag];
+    role.life = life;
+}
 @end
 
 

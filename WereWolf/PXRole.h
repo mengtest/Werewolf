@@ -11,8 +11,8 @@
 @interface PXRole : NSObject
 @property NSInteger tag;
 @property NSString *name;
-@property NSInteger type;
-@property NSInteger status;
-
+@property PXRoleType type;
+@property PXRoleStatus status;
+@property PXRoleType life;
 -(id)initRoleWithRoleType:(NSInteger)type andTag:(NSInteger)tag;
 @end

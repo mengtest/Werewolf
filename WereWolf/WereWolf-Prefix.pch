@@ -39,6 +39,9 @@
         PXRoleStatusDead =       0,
         PXRoleStatusAlive =      1,
         PXRoleStatusIsGuard =    2,
-        PXRoleStatusCupid =      3,
     }PXRoleStatus;
+    typedef enum{
+        PXRoleLifeNormal = 0,
+        PXRoleLifeCupid  = 1,
+    }PXRoleLife;
 #endif

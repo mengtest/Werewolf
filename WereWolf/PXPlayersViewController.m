@@ -14,8 +14,8 @@
 
 #define CARD_CONTAINER_WIDTH 320-31-31
 #define CARD_CONTAINER_MARGIN 31.0
-#define CARD_WIDTH  136.5
-#define CARD_HEIGHT 224.0
+#define CARD_WIDTH  100
+#define CARD_HEIGHT 120
 #define cardX 30.0
 #define cardY 155.0
 
@@ -69,11 +69,12 @@
             card.tag = i*(CARD_CONTAINER_WIDTH - CARD_WIDTH)/(num-1)+CARD_CONTAINER_MARGIN;
         }
         UIImageView *backGround = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CARD_WIDTH, CARD_HEIGHT)];
-        backGround.layer.borderColor = [UIColor redColor].CGColor;
-        backGround.layer.borderWidth = 2.0;
+//        backGround.layer.borderColor = [UIColor redColor].CGColor;
+//        backGround.layer.borderWidth = 2.0;
         backGround.tag = 100;
+        backGround.image = [UIImage imageNamed:@"playerCard"];
         [card addSubview:backGround];
-        card.backgroundColor = [UIColor whiteColor];
+        card.backgroundColor = [UIColor clearColor];
         card.hidden = YES;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
         [tap addTarget:self action:@selector(tapEvent:)];

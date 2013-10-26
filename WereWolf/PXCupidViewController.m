@@ -34,7 +34,7 @@
     for (CardDetailButton *button in self.buttonArray) {
         if (button.tag == tag) {
             button.secondImage.image = [UIImage imageNamed:@"love"];
-            [self.manager changeRoleTag:tag ToStatus:PXRoleStatusCupid];
+            [self.manager changeRoleTag:tag ToLife:PXRoleLifeCupid];
         }
     }
 }

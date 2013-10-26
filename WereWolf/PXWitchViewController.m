@@ -38,7 +38,7 @@
                 [self.manager changeRoleTag:tag ToStatus:PXRoleStatusAlive];
                 button.secondImage.image = nil;
             }
-            if (status == PXRoleStatusCupid||status == PXRoleStatusAlive) {
+            if (status == PXRoleStatusAlive) {
                 [self.manager changeRoleTag:tag ToStatus:PXRoleStatusDead];
                 button.secondImage.image = [UIImage imageNamed:@"ghost"];
             }
