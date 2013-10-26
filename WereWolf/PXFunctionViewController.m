@@ -61,7 +61,7 @@
         overVC.status = status;
     }else{
         PXStoryType type = [self.manager getNextStoryTypeFromCurrentType:self.type];
-        PXStoryViewController *storyVC = [[PXStoryViewController alloc] init];
+        PXStoryViewController *storyVC = [[PXStoryViewController alloc] initWithType:type];
         storyVC.type = type;
         [self.navigationController pushViewController:storyVC animated:YES];
     }

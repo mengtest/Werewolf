@@ -10,4 +10,5 @@
 
 @interface PXStoryViewController : UIViewController
 @property  PXStoryType type;
+-(id)initWithType:(PXStoryType )type;
 @end

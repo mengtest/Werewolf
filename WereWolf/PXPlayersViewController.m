@@ -71,8 +71,7 @@
 }
 -(void)startGame:(UIButton *)sender
 {
-    PXStoryViewController *storyVC = [[PXStoryViewController alloc] init];
-    storyVC.type = [self.manager getNextStoryTypeFromCurrentType:PXStoryTypeStart];
+    PXStoryViewController *storyVC = [[PXStoryViewController alloc] initWithType:[self.manager getNextStoryTypeFromCurrentType:PXStoryTypeStart]];
     
     [self.navigationController pushViewController:storyVC animated:YES];
 

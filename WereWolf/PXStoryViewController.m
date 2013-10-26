@@ -35,12 +35,20 @@
     return self;
 }
 
+-(id)initWithType:(PXStoryType)type
+{
+    self = [super init];
+    if (self) {
+        NSString *gitName = [self getGifNameForType:self.type];
+        gif = [NSData dataWithContentsOfFile: [[NSBundle mainBundle] pathForResource:gitName ofType:@"gif"]];
+    }
+    return self;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    NSString *gitName = [self getGifNameForType:self.type];
-    gif = [NSData dataWithContentsOfFile: [[NSBundle mainBundle] pathForResource:gitName ofType:@"gif"]];
+
     
 
     self.gifView.userInteractionEnabled = NO;
