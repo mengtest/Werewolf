@@ -55,10 +55,18 @@
 }
 -(void)nextVC:(UISwipeGestureRecognizer *)sender
 {
-    PXGameStatus status = [self.manager getGameStatus];
-    if (status&&self.type == PXStoryTypePeople) {
-        PXOverViewController *overVC = [[PXOverViewController alloc]init];
-        overVC.status = status;
+    if (self.type == PXStoryTypePeople) {
+        PXGameStatus status = [self.manager getGameStatus];
+        if (status == PXGameStatusNormal) {
+            PXStoryType type = [self.manager getNextStoryTypeFromCurrentType:self.type];
+            PXStoryViewController *storyVC = [[PXStoryViewController alloc] initWithType:type];
+            storyVC.type = type;
+            [self.navigationController pushViewController:storyVC animated:YES];
+        }else{
+            PXOverViewController *overVC = [[PXOverViewController alloc]init];
+            overVC.status = status;
+            [self.navigationController pushViewController:overVC animated:YES];
+        }
     }else{
         PXStoryType type = [self.manager getNextStoryTypeFromCurrentType:self.type];
         PXStoryViewController *storyVC = [[PXStoryViewController alloc] initWithType:type];

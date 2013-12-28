@@ -81,7 +81,7 @@ static PXRoleManager *instance = nil;
 -(PXStoryType)getNextStoryTypeFromCurrentType:(PXStoryType)currentType
 {
     PXStoryType storyType = 4;
-    
+        NSLog(@"\ncurrentType:%d\nnextType:%d\n%@",currentType,storyType,self.roles);
     switch (currentType) {
         case PXStoryTypeStart:{
             if (_predictIsChosen) {
@@ -134,7 +134,7 @@ static PXRoleManager *instance = nil;
         default:
             break;
     }
-    NSLog(@"\ncurrentType:%d\nnextType:%d\n%@",currentType,storyType,self);
+
     return storyType;
 }
 -(PXRoleType)getRoleTypeWithTag:(NSInteger)tag
@@ -159,7 +159,7 @@ static PXRoleManager *instance = nil;
 {
     PXRole *role = [self.roles objectAtIndex:tag];
     role.status = status;
-
+    NSLog(@"%@",self.roles);
     if (status == PXRoleStatusDead) {
         PXRoleType type = [self getRoleTypeWithTag:tag];
         switch (type) {
@@ -254,8 +254,34 @@ static PXRoleManager *instance = nil;
     if (cupidNum == 2&&isCupidWin) {
         return PXGameStatusCupidWin;
     }
-    NSLog(@"status:%d",status);
     return status;
+}
+-(NSArray *)getSuccessRoleTag:(PXGameStatus)status
+{
+    NSMutableArray *rolesTag = [[NSMutableArray alloc]init];
+    if (status == PXGameStatusCupidWin) {
+        for (PXRole *role in self.roles) {
+            if (role.life == PXRoleLifeCupid) {
+                [rolesTag addObject:[NSNumber numberWithInteger:role.tag]];
+            }
+        }
+    }
+    if (status == PXGameStatusPeopleWin) {
+        for (PXRole *role in self.roles) {
+            if (role.type == PXRoleTypeWolf) {
+                [rolesTag addObject:[NSNumber numberWithInteger:role.tag]];
+            }
+        }
+    }
+    if (status == PXGameStatusWolfWin) {
+        for (PXRole *role in self.roles) {
+            if (role.type != PXRoleTypeWolf) {
+                [rolesTag addObject:[NSNumber numberWithInteger:role.tag]];
+                
+            }
+        }
+    }
+    return [rolesTag copy];
 }
 -(void)cleanRoleStatus
 {

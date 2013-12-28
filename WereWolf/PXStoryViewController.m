@@ -39,6 +39,8 @@
 {
     self = [super init];
     if (self) {
+        NSLog(@"%d",type);
+        self.type = type;
         NSString *gitName = [self getGifNameForType:self.type];
         gif = [NSData dataWithContentsOfFile: [[NSBundle mainBundle] pathForResource:gitName ofType:@"gif"]];
     }
@@ -48,11 +50,12 @@
 {
     [super viewDidLoad];
     
+    self.gifView.userInteractionEnabled = NO;
+    [self.gifView loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
 
     
 
-    self.gifView.userInteractionEnabled = NO;
-    [self.gifView loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
+
     
     UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(nextVC:)];
     swipe.direction = UISwipeGestureRecognizerDirectionLeft;

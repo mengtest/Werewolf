@@ -107,8 +107,22 @@
 		817FC206181BE9EE00B8B2FC /* playerBackS.png in Resources */ = {isa = PBXBuildFile; fileRef = 817FC205181BE9EE00B8B2FC /* playerBackS.png */; };
 		817FC20A181BECC900B8B2FC /* wolf.gif in Resources */ = {isa = PBXBuildFile; fileRef = 817FC207181BECC900B8B2FC /* wolf.gif */; };
 		817FC20E181BECD300B8B2FC /* cardBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 817FC20D181BECD300B8B2FC /* cardBG.png */; };
-		817FC211181BEDEA00B8B2FC /* guard.gif in Resources */ = {isa = PBXBuildFile; fileRef = 817FC20F181BEDEA00B8B2FC /* guard.gif */; };
 		817FC212181BEDEA00B8B2FC /* predict.gif in Resources */ = {isa = PBXBuildFile; fileRef = 817FC210181BEDEA00B8B2FC /* predict.gif */; };
+		81C273E9181C24210016C3FB /* guard.gif in Resources */ = {isa = PBXBuildFile; fileRef = 81C273E8181C24210016C3FB /* guard.gif */; };
+		81C273F9181C9D520016C3FB /* PXShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C273F7181C9D520016C3FB /* PXShowViewController.m */; };
+		81C273FA181C9D520016C3FB /* PXShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81C273F8181C9D520016C3FB /* PXShowViewController.xib */; };
+		81C273FC181C9FE80016C3FB /* overBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C273FB181C9FE80016C3FB /* overBG.png */; };
+		81C273FF181CA0050016C3FB /* overShare.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C273FD181CA0050016C3FB /* overShare.png */; };
+		81C27400181CA0050016C3FB /* overShareS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C273FE181CA0050016C3FB /* overShareS.png */; };
+		81C27403181CA0850016C3FB /* overQuick.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C27401181CA0850016C3FB /* overQuick.png */; };
+		81C27404181CA0850016C3FB /* overQuickS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C27402181CA0850016C3FB /* overQuickS.png */; };
+		81C27407181CA0A90016C3FB /* overMain.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C27405181CA0A90016C3FB /* overMain.png */; };
+		81C27408181CA0A90016C3FB /* overMainS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C27406181CA0A90016C3FB /* overMainS.png */; };
+		81C2740C181CA2260016C3FB /* over1.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C27409181CA2260016C3FB /* over1.png */; };
+		81C2740D181CA2260016C3FB /* over2.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C2740A181CA2260016C3FB /* over2.png */; };
+		81C2740E181CA2260016C3FB /* over3.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C2740B181CA2260016C3FB /* over3.png */; };
+		81C27411181CA4720016C3FB /* huairen.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C2740F181CA4720016C3FB /* huairen.png */; };
+		81C27412181CA4720016C3FB /* haoren.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C27410181CA4720016C3FB /* haoren.png */; };
 		DBA6AAF4181B538C00BF9664 /* cardBackName.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA6AAF3181B538C00BF9664 /* cardBackName.png */; };
 		DBA6AAFB181B568B00BF9664 /* PXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AAFA181B568B00BF9664 /* PXAlertView.m */; };
 		DBA6AAFE181B56D300BF9664 /* PXDataKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA6AAFD181B56D300BF9664 /* PXDataKeeper.m */; };
@@ -256,8 +270,23 @@
 		817FC205181BE9EE00B8B2FC /* playerBackS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerBackS.png; sourceTree = "<group>"; };
 		817FC207181BECC900B8B2FC /* wolf.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wolf.gif; sourceTree = "<group>"; };
 		817FC20D181BECD300B8B2FC /* cardBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBG.png; sourceTree = "<group>"; };
-		817FC20F181BEDEA00B8B2FC /* guard.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = guard.gif; sourceTree = "<group>"; };
 		817FC210181BEDEA00B8B2FC /* predict.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = predict.gif; sourceTree = "<group>"; };
+		81C273E8181C24210016C3FB /* guard.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = guard.gif; sourceTree = "<group>"; };
+		81C273F6181C9D520016C3FB /* PXShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXShowViewController.h; sourceTree = "<group>"; };
+		81C273F7181C9D520016C3FB /* PXShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXShowViewController.m; sourceTree = "<group>"; };
+		81C273F8181C9D520016C3FB /* PXShowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXShowViewController.xib; sourceTree = "<group>"; };
+		81C273FB181C9FE80016C3FB /* overBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overBG.png; sourceTree = "<group>"; };
+		81C273FD181CA0050016C3FB /* overShare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overShare.png; sourceTree = "<group>"; };
+		81C273FE181CA0050016C3FB /* overShareS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overShareS.png; sourceTree = "<group>"; };
+		81C27401181CA0850016C3FB /* overQuick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overQuick.png; sourceTree = "<group>"; };
+		81C27402181CA0850016C3FB /* overQuickS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overQuickS.png; sourceTree = "<group>"; };
+		81C27405181CA0A90016C3FB /* overMain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overMain.png; sourceTree = "<group>"; };
+		81C27406181CA0A90016C3FB /* overMainS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overMainS.png; sourceTree = "<group>"; };
+		81C27409181CA2260016C3FB /* over1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = over1.png; sourceTree = "<group>"; };
+		81C2740A181CA2260016C3FB /* over2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = over2.png; sourceTree = "<group>"; };
+		81C2740B181CA2260016C3FB /* over3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = over3.png; sourceTree = "<group>"; };
+		81C2740F181CA4720016C3FB /* huairen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huairen.png; sourceTree = "<group>"; };
+		81C27410181CA4720016C3FB /* haoren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = haoren.png; sourceTree = "<group>"; };
 		DBA6AAF3181B538C00BF9664 /* cardBackName.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBackName.png; sourceTree = "<group>"; };
 		DBA6AAF9181B568B00BF9664 /* PXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXAlertView.h; sourceTree = "<group>"; };
 		DBA6AAFA181B568B00BF9664 /* PXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXAlertView.m; sourceTree = "<group>"; };
@@ -407,6 +436,8 @@
 				8106FE09181AA98600DBC5E9 /* PXStoryViewController.m */,
 				811C345B181BCF89006E2229 /* PXOverViewController.h */,
 				811C345C181BCF89006E2229 /* PXOverViewController.m */,
+				81C273F6181C9D520016C3FB /* PXShowViewController.h */,
+				81C273F7181C9D520016C3FB /* PXShowViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -423,8 +454,11 @@
 		8106FDA6181A466B00DBC5E9 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				81C2740F181CA4720016C3FB /* huairen.png */,
+				81C27410181CA4720016C3FB /* haoren.png */,
 				DBA6AB02181B608C00BF9664 /* 输入框.png */,
 				817FC20D181BECD300B8B2FC /* cardBG.png */,
+				81C273EC181C25540016C3FB /* overImage */,
 				810CD676181B806300B38CDD /* Player */,
 				8106FE3D181B5B1C00DBC5E9 /* bigCard */,
 				8106FE30181AD93100DBC5E9 /* function */,
@@ -504,10 +538,10 @@
 			children = (
 				8106FE0E181AAEFC00DBC5E9 /* cupid.gif */,
 				8106FE0F181AAEFC00DBC5E9 /* hunter.gif */,
+				81C273E8181C24210016C3FB /* guard.gif */,
 				8106FE10181AAEFC00DBC5E9 /* raise.gif */,
 				8106FE11181AAEFC00DBC5E9 /* witch.gif */,
 				817FC207181BECC900B8B2FC /* wolf.gif */,
-				817FC20F181BEDEA00B8B2FC /* guard.gif */,
 				817FC210181BEDEA00B8B2FC /* predict.gif */,
 			);
 			name = GIF;
@@ -518,6 +552,7 @@
 			children = (
 				8106FE20181ACA0000DBC5E9 /* CardDetailButton.h */,
 				8106FE1F181ACA0000DBC5E9 /* CardDetailButton.m */,
+				81C273F8181C9D520016C3FB /* PXShowViewController.xib */,
 				811C345D181BCF89006E2229 /* PXOverViewController.xib */,
 				8106FDA1181A459B00DBC5E9 /* PXMianViewController.xib */,
 				8106FDB9181A4C7400DBC5E9 /* PXChooseViewController.xib */,
@@ -644,6 +679,23 @@
 			path = TouchJSON/Source;
 			sourceTree = "<group>";
 		};
+		81C273EC181C25540016C3FB /* overImage */ = {
+			isa = PBXGroup;
+			children = (
+				81C27409181CA2260016C3FB /* over1.png */,
+				81C2740A181CA2260016C3FB /* over2.png */,
+				81C2740B181CA2260016C3FB /* over3.png */,
+				81C27405181CA0A90016C3FB /* overMain.png */,
+				81C27406181CA0A90016C3FB /* overMainS.png */,
+				81C273FD181CA0050016C3FB /* overShare.png */,
+				81C273FE181CA0050016C3FB /* overShareS.png */,
+				81C27401181CA0850016C3FB /* overQuick.png */,
+				81C27402181CA0850016C3FB /* overQuickS.png */,
+				81C273FB181C9FE80016C3FB /* overBG.png */,
+			);
+			name = overImage;
+			sourceTree = "<group>";
+		};
 		DBA6AAF5181B55D900BF9664 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,7 +795,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				817FC211181BEDEA00B8B2FC /* guard.gif in Resources */,
 				8106FDD1181A551300DBC5E9 /* choose03q.png in Resources */,
 				8106FDD2181A551300DBC5E9 /* choose04m.png in Resources */,
 				8106FDB4181A46E200DBC5E9 /* mianButton1.png in Resources */,
@@ -751,13 +802,16 @@
 				8106FE4A181B5BBB00DBC5E9 /* big4.png in Resources */,
 				8106FDD6181A551300DBC5E9 /* choose06m.png in Resources */,
 				8106FDF4181A724900DBC5E9 /* small7.png in Resources */,
+				81C2740D181CA2260016C3FB /* over2.png in Resources */,
 				8106FE2D181AD92D00DBC5E9 /* ghost.png in Resources */,
 				810CD66E181B775300B38CDD /* chooseStart.png in Resources */,
 				8106FE2E181AD92D00DBC5E9 /* love.png in Resources */,
+				81C27404181CA0850016C3FB /* overQuickS.png in Resources */,
 				811C345F181BCF89006E2229 /* PXOverViewController.xib in Resources */,
 				DBA6AAF4181B538C00BF9664 /* cardBackName.png in Resources */,
 				8106FDF3181A724900DBC5E9 /* small1.png in Resources */,
 				817FC204181BE8AB00B8B2FC /* playerBG.png in Resources */,
+				81C27411181CA4720016C3FB /* huairen.png in Resources */,
 				8106FE47181B5BBB00DBC5E9 /* big1.png in Resources */,
 				8106FDD0181A551300DBC5E9 /* choose03m.png in Resources */,
 				810CD673181B77BD00B38CDD /* chooseMinS.png in Resources */,
@@ -765,14 +819,19 @@
 				817FC206181BE9EE00B8B2FC /* playerBackS.png in Resources */,
 				8106FDDD181A551300DBC5E9 /* choosePick.png in Resources */,
 				8106FDEF181A61A800DBC5E9 /* small5.png in Resources */,
+				81C273FC181C9FE80016C3FB /* overBG.png in Resources */,
 				8106FDCF181A551300DBC5E9 /* choose02q.png in Resources */,
 				817FC202181BE7D600B8B2FC /* playerBack.png in Resources */,
 				8106FDD5181A551300DBC5E9 /* choose05q.png in Resources */,
 				8106FDFA181A767700DBC5E9 /* choose07q.png in Resources */,
 				8106FD7B181A3DA700DBC5E9 /* InfoPlist.strings in Resources */,
+				81C27403181CA0850016C3FB /* overQuick.png in Resources */,
 				8106FE2F181AD92D00DBC5E9 /* shield.png in Resources */,
 				8106FDD7181A551300DBC5E9 /* choose06q.png in Resources */,
 				8106FD83181A3DA700DBC5E9 /* Images.xcassets in Resources */,
+				81C27408181CA0A90016C3FB /* overMainS.png in Resources */,
+				81C27407181CA0A90016C3FB /* overMain.png in Resources */,
+				81C2740E181CA2260016C3FB /* over3.png in Resources */,
 				810CD65E181B656D00B38CDD /* chooseAdd.png in Resources */,
 				817FC212181BEDEA00B8B2FC /* predict.gif in Resources */,
 				810CD672181B77BD00B38CDD /* chooseMin.png in Resources */,
@@ -785,8 +844,10 @@
 				8106FE46181B5BBB00DBC5E9 /* big0.png in Resources */,
 				8106FDD4181A551300DBC5E9 /* choose05m.png in Resources */,
 				8106FE49181B5BBB00DBC5E9 /* big3.png in Resources */,
+				81C27400181CA0050016C3FB /* overShareS.png in Resources */,
 				817FC20A181BECC900B8B2FC /* wolf.gif in Resources */,
 				810CD675181B78D600B38CDD /* chooseAddS.png in Resources */,
+				81C2740C181CA2260016C3FB /* over1.png in Resources */,
 				8106FDED181A61A800DBC5E9 /* small3.png in Resources */,
 				8106FDEA181A61A800DBC5E9 /* small0.png in Resources */,
 				8106FE15181AAEFC00DBC5E9 /* raise.gif in Resources */,
@@ -797,7 +858,10 @@
 				8106FDEE181A61A800DBC5E9 /* small4.png in Resources */,
 				8106FDA3181A459B00DBC5E9 /* PXMianViewController.xib in Resources */,
 				8106FDCE181A551300DBC5E9 /* choose02m.png in Resources */,
+				81C273E9181C24210016C3FB /* guard.gif in Resources */,
 				8106FE48181B5BBB00DBC5E9 /* big2.png in Resources */,
+				81C273FA181C9D520016C3FB /* PXShowViewController.xib in Resources */,
+				81C273FF181CA0050016C3FB /* overShare.png in Resources */,
 				817FC200181BE7C400B8B2FC /* playerCard.png in Resources */,
 				8106FE4D181B5BBB00DBC5E9 /* big7.png in Resources */,
 				8106FE24181ACD4900DBC5E9 /* cardBack.png in Resources */,
@@ -805,6 +869,7 @@
 				8106FE0C181AA98600DBC5E9 /* PXStoryViewController.xib in Resources */,
 				8106FDF0181A61A800DBC5E9 /* small6.png in Resources */,
 				8106FE13181AAEFC00DBC5E9 /* cupid.gif in Resources */,
+				81C27412181CA4720016C3FB /* haoren.png in Resources */,
 				8106FDB3181A46E200DBC5E9 /* mainBG.png in Resources */,
 				817FC20E181BECD300B8B2FC /* cardBG.png in Resources */,
 				8106FDB6181A46E200DBC5E9 /* mianButton3.png in Resources */,
@@ -847,6 +912,7 @@
 				8106FE29181AD69300DBC5E9 /* PXCupidViewController.m in Sources */,
 				811C345E181BCF89006E2229 /* PXOverViewController.m in Sources */,
 				8106FE21181ACA0000DBC5E9 /* CardDetailButton.m in Sources */,
+				81C273F9181C9D520016C3FB /* PXShowViewController.m in Sources */,
 				8106FDA2181A459B00DBC5E9 /* PXMianViewController.m in Sources */,
 				8106FDBA181A4C7400DBC5E9 /* PXChooseViewController.m in Sources */,
 				8106FE1D181AC3F000DBC5E9 /* PXFunctionViewController.m in Sources */,

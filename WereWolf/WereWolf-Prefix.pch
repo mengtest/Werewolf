@@ -47,10 +47,10 @@
         PXRoleLifeCupid  = 1,
     }PXRoleLife;
 
-typedef enum{
-    PXGameStatusNormal = 0,
-    PXGameStatusPeopleWin = 1,
-    PXGameStatusWolfWin = 2,
-    PXGameStatusCupidWin = 3,
-}PXGameStatus;
+    typedef enum{
+        PXGameStatusNormal = 0,
+        PXGameStatusPeopleWin = 1,
+        PXGameStatusWolfWin = 2,
+        PXGameStatusCupidWin = 3,
+    }PXGameStatus;
 #endif

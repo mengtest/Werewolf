@@ -50,11 +50,11 @@
     [self.view addSubview:background];
     
     
-    UIButton *startButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [startButton setTitle:@"startGame" forState:UIControlStateNormal];
-    startButton.frame = CGRectMake(0, 0, 100, 100);
-    [startButton addTarget:self action:@selector(startGame:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:startButton];
+//    UIButton *startButton = [UIButton buttonWithType:UIButtonTypeSystem];
+//    [startButton setTitle:@"startGame" forState:UIControlStateNormal];
+//    startButton.frame = CGRectMake(0, 0, 100, 100);
+//    [startButton addTarget:self action:@selector(startGame:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:startButton];
     
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     backButton.frame = backButtonFrame;
@@ -158,6 +158,32 @@
     //UIView *InputView = [[PXInputView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
 
 }
+-(void)tapEventView:(UIView *)view
+{
+    /*
+     CATransition *animation = [CATransition animation];
+     animation.delegate = self;
+     animation.duration =0.5f;
+     animation.timingFunction = UIViewAnimationCurveEaseInOut;
+     animation.type = @"cube";
+     animation.subtype = kCATransitionFromTop;
+     animation.subtype = kCATransitionFromRight;
+     [tap.view.layer addAnimation:animation forKey:@"animation"];
+     */
+    
+    
+    PXTextInputViewController *inputNameController = [[PXTextInputViewController alloc]init];
+    inputNameController.type = [self.manager getRoleTypeWithTag:cardNum-1];
+    inputNameController.tag = cardNum-1;
+    //[self.navigationController pushViewController:inputNameController animated:YES];
+    [self flipToViewController:inputNameController fromView:view withCompletion:^{
+        [self loadCardViewWithNumber:--cardNum];
+    }];
+    
+    
+    //UIView *InputView = [[PXInputView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
+    
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -188,10 +214,9 @@
 {
     CGPoint touchPoint;
     UITouch *touch = [touches anyObject];
-    return;
-//    if (_numOfcard == self.gameModel.peopleNum) {
-//        return;
-//    }
+    if (cardNum == 0) {
+        return;
+    }
     if (touch) {
         touchPoint = [touch locationInView:self.view];
         if (touchPoint.y > cardY && touchPoint.y < cardY+CARD_HEIGHT) {
@@ -226,9 +251,9 @@
 {
     CGPoint touchPoint;
     UITouch *touch = [touches anyObject];
-//    if (_numOfcard == self.gameModel.peopleNum) {
-//        return;
-//    }
+    if (cardNum == 0) {
+        return;
+    }
     if (touch) {
         touchPoint = [touch locationInView:self.view];
         if (touchPoint.y > cardY && touchPoint.y < cardY+CARD_HEIGHT) {
@@ -262,9 +287,9 @@
 {
     CGPoint touchPoint;
     UITouch *touch = [touches anyObject];
-//    if (_numOfcard == self.gameModel.peopleNum) {
-//        return;
-//    }
+    if (cardNum == 0) {
+        return;
+    }
     if (touch) {
         touchPoint = [touch locationInView:self.view];
         if (touchPoint.y > cardY && touchPoint.y < cardY+CARD_HEIGHT) {
@@ -276,14 +301,14 @@
                     CGRect next = nextView.frame;
                     if (touchPoint.x > font.origin.x && touchPoint.x < next.origin.x) {
 //                        _isNoPhoto =NO;
-//                        [self showTakePhotoView:fontView];
+                        [self tapEventView:fontView];
                     }else{
                         [self downTheView:fontView];
                     }
                 }else{
                     if (touchPoint.x > font.origin.x && touchPoint.x < font.origin.x + 160) {
 //                        _isNoPhoto =NO;
-//                        [self showTakePhotoView:fontView];
+                        [self tapEventView:fontView];
                     }else{
                         [self downTheView:fontView];
                     }

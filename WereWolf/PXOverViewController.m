@@ -9,8 +9,11 @@
 #import "PXOverViewController.h"
 #import "PXChooseViewController.h"
 #import <BaiduSocialShare/BDSocialShareSDK.h>
+#import "PXMianViewController.h"
 @interface PXOverViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *titleLable;
+
+@property (weak, nonatomic) IBOutlet UIImageView *titleImage;
+@property (weak, nonatomic) IBOutlet UIImageView *overImageView;
 
 @end
 
@@ -24,6 +27,11 @@
     }
     return self;
 }
+- (IBAction)backToFirst:(UIButton *)sender {
+    PXMianViewController *chooseVC = [self.navigationController.childViewControllers objectAtIndex:0];
+    [self.navigationController popToViewController:chooseVC animated:YES];
+}
+
 - (IBAction)shareAction:(UIButton *)sender {
     BDSocialEventHandler result = ^(BD_SOCIAL_RESULT requestResult, NSString *shareType, id response, NSError *error)
     {
@@ -67,7 +75,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.titleLable.text = [NSString stringWithFormat:@"%d",self.status];
+    NSString *imageName = [NSString stringWithFormat:@"over%d",self.status];
+    self.overImageView.image = [UIImage imageNamed:imageName];
     // Do any additional setup after loading the view from its nib.
 }
 
